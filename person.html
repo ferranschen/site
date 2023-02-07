@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet" />
+
+    <title>My Personal Research Website</title>
+    <style>
+      .jumbotron {
+        background-image: url("https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80");
+        background-size: cover;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body style="font-family: Avenir; color: #444444">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Weihao Chen (陳威豪）</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#research">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cv">CV</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header class="jumbotron text-center">
+      <h1 class="display-4">Welcome to My Personal Research Website</h1>
+      <p class="lead">
+        Hi there, this is Weihao. A HCI and data science researcher.
+      </p>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="container">
+      <h2
+        class="text-left"
+        style="text-decoration-line: underline; text-decoration-style: solid"
+      >
+        About Me
+      </h2>
+      <br />
+      <!-- add a random picture avatar at left -->
+      <img
+        src="pic.jpg"
+        alt="Weihao Chen"
+        class="float-left rounded-circle"
+        width="150"
+        height="150"
+        style="margin-right: 10px"
+      />
+      <p>
+        Hi, my name is Weihao Chen (陳威豪). I'm a second-year Ph.D. student in
+        the Department of Computer Science at Purdue University, and a member of
+        the Human-Centered Software Systems Lab led by Professor Tianyi Zhang.
+        My research focuses on Human-Computer Interaction (HCI) and Data
+        Science, and I'm currently developing tools to help data scientists.
+        Prior to my studies at Purdue, I worked as a software engineer at
+        Realtek Semiconductor, Taiwan from 2017 to 2021.
+      </p>
+    </section>
+    <br />
+    <br />
+    <br />
+    <!-- Publications Section -->
+    <section id="research" class="container">
+      <h2
+        class="text-left"
+        style="text-decoration-line: underline; text-decoration-style: solid"
+      >
+        Research Projects
+      </h2>
+      <br />
+      <!-- MIWA project-->
+      <div class="card">
+        <div class="card-header">
+          <h3>
+            MIWA: Mixed-Initiative Web Automation for Better User Control and
+            Confidence
+          </h3>
+        </div>
+        <div class="card-body">
+          <!--make it foldable-->
+          <p>
+            <strong>Abstract:</strong> In the era of Big Data, web scraping is
+            frequently used by data scientists, domain experts, and end-users to
+            finish time-consuming but essential data collection tasks. However,
+            developing web automation scripts requires familiarity with a
+            programming language and HTML, which remains a key learning barrier
+            for non-expert users. We provide MIWA, a mixed-initiative web
+            automation system that enables users to create web scraping programs
+            by demonstrating what contents they want from the targeted websites.
+            Compared with existing web automation tools, MIWA helps users better
+            understand a generated program and build trust in it by (1)
+            providing a step-by-step explanation of script behavior with visual
+            correspondence to the target website, (2) supporting fine-grained
+            control over web automation, and (3) automatically detecting
+            potential corner cases that are handled improperly by the generated
+            program. Besides, MIWA provides greater autonomy and control to
+            users with features such as undo/redo previous demonstration steps.
+            We conducted a within-subjects user study with 24 participants and
+            compared MIWA with Rousillon, a state-of-the-art web automation
+            tool. Results show that, compared with Rousillon, MIWA reduced the
+            task completion time by half while helping participants gain more
+            confidence on the generated script.
+          </p>
+          <p>
+            <strong>Keywords:</strong> Programming by Demonstration, Web
+            Automation, Data Science
+          </p>
+          <p>
+            <strong>Publication:</strong> <a href="https://dl.acm.org">N/A</a>
+          </p>
+        </div>
+      </div>
+      <!--space-->
+      <br />
+      <!-- Coding behavior-->
+      <div class="card">
+        <div class="card-header">
+          <h3>
+            Understanding the Coding Behavior of Data Scientists at the Action
+            Level
+          </h3>
+        </div>
+        <div class="card-body">
+          <!--make it foldable-->
+          <p>
+            <strong>Abstract:</strong> In the era of big data, data scientists
+            play key roles in gaining valuable insights from data in almost
+            every industry and academic field. Despite the widespread use of
+            data science, our understanding of data scientists’ coding behavior
+            remains insufficient. Previous scientific studies on data science
+            practices have been conducted by mining the code from GitHub
+            repositories or Kaggle. However, previous work only provides a
+            snapshot of their coding behavior since most of the collected source
+            codes are presented in the final form, revealing little evidence of
+            their behavior at the action level. Compared to the previous work,
+            we analyzed the source code of all execution histories and error
+            logs to gain a deeper understanding of their behavior. Our work
+            identified the prevalent mistakes made by data scientists, the
+            strategies they use to repair them, and the action-level patterns of
+            data science coding and debugging. Finally, we compared our findings
+            with previous work and demonstrated the implications of more
+            effective data science supporting tools, providing a more nuanced
+            understanding of data scientists.
+          </p>
+          <p>
+            <strong>Keywords:</strong> Data Science, Jupyter Notebook,
+            Programming Behavior
+          </p>
+          <p>
+            <strong>Publication:</strong> <a href="https://dl.acm.org">N/A</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <br />
+    <!-- cv Section -->
+    <section id="cv" class="container">
+      <h2
+        class="text-left"
+        style="text-decoration-line: underline; text-decoration-style: solid"
+      >
+        CV
+      </h2>
+      <!-- cv -->
+      <iframe src="Weihao_Chen_CV.pdf" width="100%" height="500px"></iframe>
+      <p>
+        If you have any questions, please feel free to contact via
+        <a href="mailto:chen4129@purdue.edu">email</a>.
+      </p>
+    </section>
+    <!-- Footer -->
+    <footer class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>&copy 2023 Weihao Chen <a href="#"></a></p>
+    </footer>
+  </body>
+</html>
