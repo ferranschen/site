@@ -88,15 +88,29 @@
       <div class="card-body">
         <!--make it foldable-->
         <p>
-          We introduce a mixed-initiative web automation system that helps
-          users create web scraping programs automatically. It is superior to
-          existing tools, as it provides step-by-step explanations with
-          visuals, allows more control, and automatically finds corner cases.
-          Additionally, it has undo/redo features for greater freedom. A study
-          with 24 people showed that our tool reduced task completion time by
-          half and made users more confident in the generated script compared
-          to a state-of-the-art web automation tool.
+          Web automation is frequently used by data scientists, domain experts, and programmers to complete
+          time-consuming data
+          collection tasks. However, developing web automation scripts requires familiarity with a programming language
+          and HTML,
+          which remains a key learning barrier for non-expert users. We provide MIWA, a mixed-initiative web automation
+          system
+          that enables users to create web automation scripts by demonstrating what content they want from the targeted
+          websites.
+          Compared to existing web automation tools, MIWA helps users better understand a generated script and build
+          trust in it
+          by (1) providing a step-by-step explanation of the script's behavior with visual correspondence to the target
+          website,
+          (2) supporting greater autonomy and control over web automation via step-through debugging and fine-grained
+          demonstration refinement, and (3) automatically detecting potential corner cases that are handled improperly
+          by the
+          generated script. We conducted a within-subjects user study with 24 participants and compared MIWA with
+          Rousillon, a
+          state-of-the-art web automation tool. Results showed that, compared to Rousillon, MIWA reduced the task
+          completion time
+          by half while helping participants gain more confidence in the generated script.
         </p>
+        <!-- image teaser -->
+        <img class="card-img-top" src="./miwa_teaser.png" alt="Card image cap">
         <p>
           <strong>Keywords:</strong> Programming by Demonstration, Web
           Automation, Data Science
@@ -119,7 +133,8 @@
               UIST '23: Proceedings of the 36th Annual ACM Symposium on User
               Interface Software and Technology
             </i>
-
+            <br />
+            [paper] [video] [slides]
           </li>
           </p>
       </div>
@@ -137,16 +152,23 @@
       <div class="card-body">
         <!--make it foldable-->
         <p>
-          Data scientists play an important role in getting useful information
-          from data in many businesses and research areas. Even though data
-          science is used a lot, we don't know much about how data scientists
-          code. Previous studies got code from GitHub and Kaggle, but this
-          only showed the finished product. Our study looked at all the
-          running history and error logs to get a better understanding. We
-          found out the mistakes data scientists make, how they try to fix
-          them, and the patterns of coding and debugging. Finally, we compared
-          our results to previous studies and showed how better tools can help
-          data scientists.
+          In the era of big data, Data Science (DS) plays a crucial role in gaining valuable insights from data across
+          various
+          domains. However, our understanding of DS programmers' coding behavior remains insufficient. Previous studies
+          mainly
+          analyzed DS code from public code-sharing platforms such as GitHub and Kaggle, which are limited to code
+          changes
+          committed to the version history, omitting many coding errors that are resolved before code commits. To bridge
+          this gap,
+          we present a comprehensive analysis of the fine-grained logs of a DS hackathon that includes Jupyter Notebooks
+          written
+          by participants for over six weeks. We recorded all code changes and program execution logs, enabling us to
+          identify
+          common programming mistakes and bugs across different data science stages and programmers' debugging behavior.
+          This work
+          enhances our understanding of DS coding errors and debugging practices of DS programmers, highlighting several
+          future
+          opportunities for designing new tool support for DS programming.
         </p>
         <p>
           <strong>Keywords:</strong> Data Science, Jupyter Notebook,
