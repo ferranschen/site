@@ -9,7 +9,7 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 2;
-    color: #333;
+    color: #424242;
 }
 
 .jumbotron {
@@ -28,6 +28,19 @@ body {
 .heading-primary-sub {
     animation: moveInLeft 1s ease-out;
     letter-spacing: 2px;
+}
+
+.attending-date {
+    display: inline;
+    background-color: #abcfd95d;
+    padding: 3px 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.attending-event {
+    display: inline;
+    padding: 3px 5px;
 }
 
 @keyframes moveInLeft {
