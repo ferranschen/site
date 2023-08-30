@@ -74,3 +74,21 @@ body {
         transform: translate(0);
     }
 }
+
+.paper-item {
+    font-size: 1 rem;
+}
+
+.paper-title {
+    font-weight: 500;
+    display: block;
+}
+
+.paper-author {
+    display: block;
+}
+
+.paper-venue {
+    margin-bottom: 1rem;
+    display: block;
+}
