@@ -12,8 +12,12 @@ body {
     color: #424242;
 }
 
+section {
+    margin-bottom: 5rem;
+}
+
 .jumbotron {
-    background-image: url("https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80");
+    background-image: url("bg.jpeg");
     background-size: cover;
     color: aliceblue;
 
@@ -89,6 +93,8 @@ body {
 }
 
 .paper-venue {
-    margin-bottom: 1rem;
+    display: block;
+}
+.paper-resources {
     display: block;
 }
