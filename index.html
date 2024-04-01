@@ -24,33 +24,7 @@
 
 <body class="text-slate-700">
   <!-- Navigation Bar -->
-  <nav class="flex items-center justify-between flex-wrap bg-gray-100 p-3">
-    <div class="container mx-auto px-4">
-    <div class="block lg:hidden">
-      <button class="flex items-center px-3 py-2 border rounded text-black border-black" id="menuButton">
-        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
-    </div>
-    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden" id="menu">
-      <div class="text-sm lg:flex-grow">
-        <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
 
-          About Me
-        </a>
-        <a href="#research" class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
-          Research
-        </a>
-        <a href="https://app.box.com/s/8xyr0jk1n5j53lqp9xo159qu2ip7t6wy"
-          class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
-          CV
-        </a>
-      </div>
-    </div>
-    </div>
-  </nav>
 
   <!-- About Section -->
   <section id="about" class="container mx-auto px-4 mt-6">
@@ -75,7 +49,15 @@
         In my free time, I enjoy traveling, playing video games 🎮, and I love cats 😺.
         <br>
         <br>
-        chen4129 [at] purdue [dot] edu
+        <i class="fa-solid fa-envelope"></i><span class="ml-1"><a href="mailto:chen4129@purdue.edu"
+          class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
+          Email
+        </a></span>
+        <i class="fa-solid fa-file"></i><span class="ml-1"><a href="https://app.box.com/s/8xyr0jk1n5j53lqp9xo159qu2ip7t6wy"
+          class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
+          CV
+        </a></span>
+         
       </p>
 
       
@@ -171,10 +153,10 @@
       <div class="italic mb-2">UIST 23: Proceedings of the 36th Annual ACM Symposium on User Interface Software and
         Technology</div>
       <div class="flex space-x-2">
-        <a href="MIWA.pdf" class="flex items-center">
+        <a href="MIWA.pdf" class="flex items-center hover:underline hover:font-medium hover:text-sky-600">
           <i class="fa-solid fa-file-pdf"></i><span class="ml-2">pdf</span>
         </a>
-        <a href="https://github.com/ferranschen/MIWA" class="flex items-center">
+        <a href="https://github.com/ferranschen/MIWA" class="flex items-center hover:underline hover:font-medium hover:text-sky-600">
           <i class="fa-brands fa-github"></i><span class="ml-2">code</span>
         </a>
       </div>
@@ -184,7 +166,7 @@
       <div class="mb-2"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</div>
       <div class="italic mb-2">2018 IEEE Conference on Dependable and Secure Computing (DSC)</div>
       <div class="flex space-x-2">
-        <a href="EFF.pdf" class="flex items-center">
+        <a href="EFF.pdf" class="flex items-center hover:underline hover:font-medium hover:text-sky-600">
           <i class="fa-solid fa-file-pdf"></i><span class="ml-2">pdf</span>
         </a>
       </div>
@@ -197,41 +179,45 @@
     News
     </h2>
     <div class="space-y-4">
-      <div class="flex items-start space-x-3">
+      <div class="flex items-start space-x-2">
         <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">03/2024</div>
-        <div>I have been selected as the recipient of a Summer Research Grant. Thanks to the Purdue Computer Science Department! 🎉</div>
+        <div class="p-1">I have been selected as the recipient of a Summer Research Grant. Thanks to the Purdue Computer Science Department! 🎉</div>
       </div>
 
-      <div class="flex items-start space-x-3">
+      <div class="flex items-start space-x-2">
         <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">09/2023</div>
-        <div>I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
+        <div class="p-1">I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
       </div>
 
-      <div class="flex items-start space-x-3">
+      <div class="flex items-start space-x-2">
         <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">07/2023</div>
-        <div>Our paper - MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence is accepted by
+        <div class="p-1">Our paper - MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence is accepted by
           UIST
           2023 🎉.</div>
       </div>
-      <div class="flex items-start space-x-3">
+      <div class="flex items-start space-x-2">
         <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">05/2022</div>
-        <div>I start my internship at Intel Corporation.</div>
+        <div class="p-1">I start my internship at Intel Corporation.</div>
       </div>
-      <div class="flex items-start space-x-3">
+      <div class="flex items-start space-x-2">
         <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">01/2022</div>
-        <div>I am Graduate TA for CS 180: Problem Solving And Object-Oriented Programming.</div>
+        <div class="p-1">I am Graduate TA for CS 180: Problem Solving And Object-Oriented Programming.</div>
       </div>
-      <div class="flex items-start space-x-3">
+      <div class="flex items-start space-x-2">
         <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">09/2021</div>
-        <div>I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
+        <div class="p-1">I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
       </div>
-      <div class="flex items-start space-x-3">
+      <div class="flex items-start space-x-2">
         <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">09/2021</div>
-        <div>I join Purdue University 🚂 as an PhD student in Computer Science.</div>
+        <div class="p-1">I join Purdue University 🚂 as an PhD student in Computer Science.</div>
       </div>
     </div>
   </section>
-
+  <!-- footer -->
+  <footer class="container mx-auto px-4 mt-8">
+    <div class="text-center text-sm text-gray-500">
+      &copy; 2024 Wei-Hao Chen
+    </div>
 
 
 </body>
