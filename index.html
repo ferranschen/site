@@ -7,226 +7,230 @@
   <meta http-equiv="cache-control" content="no-cache" />
   <meta http-equiv="expires" content="0" />
   <meta http-equiv="pragma" content="no-cache" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-  <!-- <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet" /> -->
-  <!-- use roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <title>My Personal Research Website</title>
 
 </head>
 
-<body>
+<body class="text-slate-700">
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Wei-Hao Chen (陳威豪）</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#research">Research</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://app.box.com/s/8xyr0jk1n5j53lqp9xo159qu2ip7t6wy">CV</a>
-        </li>
-      </ul>
+  <nav class="flex items-center justify-between flex-wrap bg-gray-100 p-3">
+    <div class="container mx-auto px-4">
+    <div class="block lg:hidden">
+      <button class="flex items-center px-3 py-2 border rounded text-black border-black" id="menuButton">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden" id="menu">
+      <div class="text-sm lg:flex-grow">
+        <a href="#about" class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
+
+          About Me
+        </a>
+        <a href="#research" class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
+          Research
+        </a>
+        <a href="https://app.box.com/s/8xyr0jk1n5j53lqp9xo159qu2ip7t6wy"
+          class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
+          CV
+        </a>
+      </div>
+    </div>
     </div>
   </nav>
-  <!-- Header -->
-  <header class="jumbotron text-center">
-    <h1 class="display-4 heading-primary-main">Welcome to My Personal Research Website</h1>
-    <p class="lead heading-primary-sub">
-      Hi there, this is Wei-Hao. A HCI and data science researcher.
-    </p>
-  </header>
+
   <!-- About Section -->
-  <section id="about" class="container">
-    <h2 class="text-left" style="text-decoration-line: underline; text-decoration-style: solid">
+  <section id="about" class="container mx-auto px-4 mt-6">
+    <h2 class="text-left underline decoration-solid font-medium text-slate-700">
       About Me
     </h2>
-    <br />
-    <img src="pic.jpg" alt="Wei-Hao Chen" class="float-left rounded-circle" width="150" height="150"
-      style="margin-right: 10px" />
-    <p>
-      Hi, my name is Wei-Hao Chen (陳威豪). I'm a third-year Ph.D. student in
-      the Department of Computer Science at Purdue University, and a member of
-      the Human-Centered Software Systems Lab led by Professor
-      <a href="https://tianyi-zhang.github.io/">Tianyi Zhang</a>. My research
-      focuses on Human-Computer Interaction (HCI), Software Engineering, and Data Science, and I'm
-      currently developing tools to help data scientists.
-    </p>
-  </section>
-  <br />
+    <div class="flex flex-wrap mt-4">
+      <img src="pic.jpg" alt="Wei-Hao Chen" class="rounded-full mr-4 float-left w-36 h-36 shadow-xl" />
 
-  <!-- Publications Section -->
-  <section id="publication" class="container">
-    <h2 class="text-left" style="text-decoration-line: underline; text-decoration-style: solid">
-      Publications
-    </h2>
-    <div class="paper-item">
-      <div class="paper-title">MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence</div>
-      <div class="paper-authors"><strong>Wei-Hao Chen</strong>, Xiaoyu Liu, Jiacheng Zhang, Ian Iong Lam Zhicheng
-        Huang,
-        Rui Dong, Xinyu
-        Wang, Tianyi Zhang</div>
-      <div class="paper-venue">UIST 23: Proceedings of the 36th Annual ACM Symposium on User Interface Software and
-        Technology</div>
-      <div class="paper-resources">
-        <a href="MIWA.pdf">
-          <i class="fa-solid fa-file-pdf"></i>
-          pdf
-        </a>
-        <a href="https://github.com/ferranschen/MIWA">
-          <i class="fa-brands fa-github"></i>
-          code
-        </a>
-      </div>
+      <p class="flex-1 leading-relaxed">
+        Hello, my name is Wei-Hao Chen. I am a third-year Ph.D. student in the Department of Computer Science at Purdue
+        University and a member of the Human-Centered Software Systems Lab under the guidance of Professor <a href="https://tianyi-zhang.github.io/" class="text-blue-500 hover:text-blue-700">Tianyi Zhang</a>. My
+        research primarily focuses on <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Human-AI Interaction (HAI)</span>, <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Software Engineering</span>, and <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">
+          Artificial Intelligence</span>. I am currently developing tools to help data scientists using several techniques 
+          such as 
+          <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Programming-by-Demonstration</span>,
+        <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">LLM</span>, and 
+        <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Artificial Intelligence</span>.
+        
+        Prior to my Ph.D. studies at Purdue, I worked as a software engineer at Realtek Semiconductor Corp in Taiwan. My
+        previous research was centered around Cryptography.
+        In my free time, I enjoy traveling, playing video games 🎮, and I love cats 😺.
+        <br>
+        <br>
+        chen4129 [at] purdue [dot] edu
+      </p>
+
+      
+    </div>
   </section>
-  <br />
+
   <!-- Research Section -->
-  <section id="research" class="container">
-    <h2 class="text-left" style="text-decoration-line: underline; text-decoration-style: solid">
+  <section id="research" class="container mx-auto px-4 mt-8">
+    <h2 class="text-left underline decoration-solid font-medium text-slate-700">
       Research Projects
     </h2>
-    <br />
-    <!-- MIWA project-->
-    <div class="card">
-      <div class="card-header">
-        <h3>Web Automation for Data Collection</h3>
-      </div>
-      <div class="card-body">
-        <p>
-          Web automation is frequently used by data scientists, domain experts, and programmers to complete
-          time-consuming data
-          collection tasks. However, developing web automation scripts requires familiarity with a programming language
-          and HTML,
-          which remains a key learning barrier for non-expert users. We provide MIWA, a mixed-initiative web automation
-          system
-          that enables users to create web automation scripts by demonstrating what content they want from the targeted
-          websites.
-          Compared to existing web automation tools, MIWA helps users better understand a generated script and build
-          trust in it
-          by (1) providing a step-by-step explanation of the script's behavior with visual correspondence to the target
-          website,
-          (2) supporting greater autonomy and control over web automation via step-through debugging and fine-grained
-          demonstration refinement, and (3) automatically detecting potential corner cases that are handled improperly
-          by the
-          generated script. We conducted a within-subjects user study with 24 participants and compared MIWA with
-          Rousillon, a
-          state-of-the-art web automation tool. Results showed that, compared to Rousillon, MIWA reduced the task
-          completion time
-          by half while helping participants gain more confidence in the generated script.
-        </p>
-        <!-- image teaser -->
-        <img class="card-img-top" src="./miwa_teaser.png" alt="Card image cap">
-        <p>
-          <strong>Keywords:</strong> Programming by Demonstration, Web
-          Automation, Data Science
-        </p>
-        <p>
-          <strong>Publication:</strong>
-
-        <div class="paper-item">
-          <div class="paper-title">MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence</div>
-          <div class="paper-authors"><strong>Wei-Hao Chen</strong>, Xiaoyu Liu, Jiacheng Zhang, Ian Iong Lam Zhicheng
-            Huang,
-            Rui Dong, Xinyu
-            Wang, Tianyi Zhang</div>
-          <div class="paper-venue">UIST 23: Proceedings of the 36th Annual ACM Symposium on User Interface Software and
-            Technology</div>
+    <div class="mt-6">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="px-6 py-4 bg-gray-100 border-b">
+          <h3 class="font-medium text-xl mb-2">Web Automation for Data Collection</h3>
         </div>
-        </p>
+        <div class="p-6">
+          <p class="text-base mb-4 leading-relaxed">
+            Web automation is frequently used by data scientists, domain experts, and programmers to complete
+            time-consuming data collection tasks. However, developing web automation scripts requires familiarity with a
+            programming language and HTML, which remains a key learning barrier for non-expert users. We provide MIWA, a
+            mixed-initiative web automation system that enables users to create web automation scripts by demonstrating
+            what content they want from the targeted websites. Compared to existing web automation tools, MIWA helps
+            users
+            better understand a generated script and build trust in it by (1) providing a step-by-step explanation of
+            the
+            script's behavior with visual correspondence to the target website, (2) supporting greater autonomy and
+            control over web automation via step-through debugging and fine-grained demonstration refinement, and (3)
+            automatically detecting potential corner cases that are handled improperly by the generated script. We
+            conducted a within-subjects user study with 24 participants and compared MIWA with Rousillon, a
+            state-of-the-art web automation tool. Results showed that, compared to Rousillon, MIWA reduced the task
+            completion time by half while helping participants gain more confidence in the generated script.
+          </p>
+          <p class="text-base">
+            <strong>Keywords:</strong> Programming by Demonstration, Web Automation, Data Science
+          </p>
+        </div>
       </div>
     </div>
-    <!--space-->
-    <br />
-    <!-- Coding behavior-->
-    <div class="card">
-      <div class="card-header">
-        <h3>
-          Understanding the Coding Behavior of Data Scientists at the Action
-          Level
-        </h3>
-      </div>
-      <div class="card-body">
-        <!--make it foldable-->
-        <p>
-          In the era of big data, Data Science (DS) plays a crucial role in gaining valuable insights from data across
-          various
-          domains. However, our understanding of DS programmers' coding behavior remains insufficient. Previous studies
-          mainly
-          analyzed DS code from public code-sharing platforms such as GitHub and Kaggle, which are limited to code
-          changes
-          committed to the version history, omitting many coding errors that are resolved before code commits. To bridge
-          this gap,
-          we present a comprehensive analysis of the fine-grained logs of a DS hackathon that includes Jupyter Notebooks
-          written
-          by participants for over six weeks. We recorded all code changes and program execution logs, enabling us to
-          identify
-          common programming mistakes and bugs across different data science stages and programmers' debugging behavior.
-          This work
-          enhances our understanding of DS coding errors and debugging practices of DS programmers, highlighting several
-          future
-          opportunities for designing new tool support for DS programming.
-        </p>
-        <p>
-          <strong>Keywords:</strong> Data Science, Jupyter Notebook,
-          Programming Behavior
-        </p>
-        <p>
-          <strong>Publication:</strong> <a href="https://dl.acm.org">N/A</a>
-        </p>
+
+    <div class="mt-6">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="px-6 py-4 bg-gray-100 border-b">
+          <h3 class="font-medium text-xl mb-2">Understanding the Coding Behavior of Data Scientists at the Action
+            Level</h3>
+        </div>
+        <div class="p-6">
+          <p class="text-base mb-4 leading-relaxed">
+            In the era of big data, Data Science (DS) plays a crucial role in gaining valuable insights from data across
+            various
+            domains. However, our understanding of DS programmers' coding behavior remains insufficient. Previous
+            studies
+            mainly
+            analyzed DS code from public code-sharing platforms such as GitHub and Kaggle, which are limited to code
+            changes
+            committed to the version history, omitting many coding errors that are resolved before code commits. To
+            bridge
+            this gap,
+            we present a comprehensive analysis of the fine-grained logs of a DS hackathon that includes Jupyter
+            Notebooks
+            written
+            by participants for over six weeks. We recorded all code changes and program execution logs, enabling us to
+            identify
+            common programming mistakes and bugs across different data science stages and programmers' debugging
+            behavior.
+            This work
+            enhances our understanding of DS coding errors and debugging practices of DS programmers, highlighting
+            several
+            future
+            opportunities for designing new tool support for DS programming.
+          </p>
+          <p class="text-base">
+            <strong>Keywords:</strong> Data Science, Jupyter Notebook, Programming Behavior
+          </p>
+
+        </div>
       </div>
     </div>
-    <br />
-    <section id="news" class="newslist">
-      <h2 class="text-left" style="text-decoration-line: underline; text-decoration-style: solid">
-        News
-      </h2>
-      <div class="attending-item">
-        <div class="attending-date">09/2023</div>
-        <div class="attending-event">I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
-      </div>
-      <div class="attending-item">
-        <div class="attending-date">07/2023</div>
-        <div class="attending-event">Our paper - MIWA: Mixed-Initiative Web Automation for Better User Control and
-          Confidence is accepted by UIST 2023 🎉. </div>
-      </div>
-      <div class="attending-item">
-        <div class="attending-date">05/2022</div>
-        <div class="attending-event">I start my internship at Intel Corporation.</div>
-      </div>
-      <div class="attending-item">
-        <div class="attending-date">01/2022</div>
-        <div class="attending-event">I am Graduate TA for CS 180: Problem Solving And Object-Oriented Programming.</div>
-      </div>
-      <div class="attending-item">
-        <div class="attending-date">09/2021</div>
-        <div class="attending-event">I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
-      </div>
-      <div class="attending-item">
-        <div class="attending-date">09/2021</div>
-        <div class="attending-event">I join Purdue University 🚂 as an PhD student in Computer Science.</div>
-      </div>
-    </section>
   </section>
 
-  <hr />
-  <footer class="container">
-    <p class="float-right">
-      <a href="#">Back to top</a>
-    </p>
-    <p>&copy 2023 Wei-Hao Chen <a href="#"></a></p>
-  </footer>
+
+
+  <!-- Publications Section -->
+  <section id="publication" class="container mx-auto px-4 mt-8">
+    <h2 class="text-left underline decoration-solid font-medium text-slate-700">
+      Publications
+    </h2>
+    <div class="mt-2">
+      <div class="font-medium mb-2">MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence</div>
+      <div class="mb-2"><strong>Wei-Hao Chen</strong>, Xiaoyu Liu, Jiacheng Zhang, Ian Iong Lam, Zhicheng Huang, Rui
+        Dong,
+        Xinyu Wang, Tianyi Zhang</div>
+      <div class="italic mb-2">UIST 23: Proceedings of the 36th Annual ACM Symposium on User Interface Software and
+        Technology</div>
+      <div class="flex space-x-2">
+        <a href="MIWA.pdf" class="flex items-center">
+          <i class="fa-solid fa-file-pdf"></i><span class="ml-2">pdf</span>
+        </a>
+        <a href="https://github.com/ferranschen/MIWA" class="flex items-center">
+          <i class="fa-brands fa-github"></i><span class="ml-2">code</span>
+        </a>
+      </div>
+    </div>
+    <div class="mt-2">
+      <div class="font-medium mb-2">Efficient Key-Aggregate Proxy Re-Encryption for Secure Data Sharing in Clouds</div>
+      <div class="mb-2"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</div>
+      <div class="italic mb-2">2018 IEEE Conference on Dependable and Secure Computing (DSC)</div>
+      <div class="flex space-x-2">
+        <a href="EFF.pdf" class="flex items-center">
+          <i class="fa-solid fa-file-pdf"></i><span class="ml-2">pdf</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </section>
+  <section id="news" class="container mx-auto px-4 mt-8 mb-6">
+    <h2 class=" text-left underline decoration-solid mb-4 font-medium text-slate-700">
+    News
+    </h2>
+    <div class="space-y-4">
+      <div class="flex items-start space-x-3">
+        <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">03/2024</div>
+        <div>I have been selected as the recipient of a Summer Research Grant. Thanks to the Purdue Computer Science Department! 🎉</div>
+      </div>
+
+      <div class="flex items-start space-x-3">
+        <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">09/2023</div>
+        <div>I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
+      </div>
+
+      <div class="flex items-start space-x-3">
+        <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">07/2023</div>
+        <div>Our paper - MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence is accepted by
+          UIST
+          2023 🎉.</div>
+      </div>
+      <div class="flex items-start space-x-3">
+        <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">05/2022</div>
+        <div>I start my internship at Intel Corporation.</div>
+      </div>
+      <div class="flex items-start space-x-3">
+        <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">01/2022</div>
+        <div>I am Graduate TA for CS 180: Problem Solving And Object-Oriented Programming.</div>
+      </div>
+      <div class="flex items-start space-x-3">
+        <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">09/2021</div>
+        <div>I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
+      </div>
+      <div class="flex items-start space-x-3">
+        <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">09/2021</div>
+        <div>I join Purdue University 🚂 as an PhD student in Computer Science.</div>
+      </div>
+    </div>
+  </section>
+
+
+
 </body>
 
 </html>
