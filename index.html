@@ -10,159 +10,197 @@
   <meta name="description"
     content="Wei-Hao Chen, a fourth-year Ph.D. student in Computer Science at Purdue University, focuses on Human-AI Interaction, Software Engineering, and Artificial Intelligence in the Human-Centered Software Systems Lab. With experience at Realtek Semiconductor and a background in Cryptography, he develops tools for data science. Enjoys travel, gaming, and cats.">
   <meta name="keywords" content="Wei-Hao Chen, Purdue University, Computer Science, Human-AI Interaction, Software Engineering, Artificial Intelligence, Realtek Semiconductor, Cryptography, Data Science, Programming by Demonstration, LLM, Artificial Intelligence, MIWA, Web Automation, Data Collection, Jupyter Notebook, Programming Behavior">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
 
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="./tailwind.js"></script>
 
-  <title>My Personal Research Website</title>
+  <title>Wei-Hao Chen</title>
 
 </head>
 
-<body class="text-slate-700 bg-gray-100 text-base tracking-normal">
-  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+<body class="text-slate-600 bg-white text-base leading-relaxed font-['Helvetica']">
+  <!-- Navigation Bar (new) -->
+  <nav class="border-b border-gray-200 bg-white sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="#" class="text-xl font-semibold"><strong>Wei-Hao</strong> Chen</a>
+        </div>
+        <div class="flex space-x-8">
+          <a href="#about" class="inline-flex items-center px-1 pt-1 text-sm hover:text-sky-600">about</a>
+          <a href="#publication" class="inline-flex items-center px-1 pt-1 text-sm hover:text-sky-600">publications</a>
+          <a href="#news" class="inline-flex items-center px-1 pt-1 text-sm hover:text-sky-600">news</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <!-- About Section -->
-    <section id="about" class="px-6 py-8">
-      <h2 class="text-left underline decoration-solid font-medium text-slate-700">
-        About Me
-      </h2>
-      <div class="flex flex-wrap mt-4">
-        <img src="pic.jpg" alt="Wei-Hao Chen" class="rounded-full mr-4 float-left w-36 h-36 shadow-xl" />
-
-        <p class="flex-1 leading-relaxed">
-          Hello, my name is <span class="name-underline">Wei-Hao Chen</span>. I am a fourth-year Ph.D. student in the Department of Computer Science at Purdue
-          University and a member of the Human-Centered Software Systems Lab under the guidance of Professor <a href="https://tianyi-zhang.github.io/" class="text-blue-500 hover:text-blue-700">Tianyi Zhang</a>. My
-          research primarily focuses on <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Human Computer Interaction (HCI)</span>, <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Software Engineering</span>, and <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">
-            Artificial Intelligence</span>. I am currently developing tools to help data scientists using several techniques 
-            such as 
-            <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">LLM</span>,
-          <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Artificial Intelligence</span>, and 
-          <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Programming-by-Demonstration</span>.
-          
-          Prior to my Ph.D. studies at Purdue, I worked as a software engineer at Realtek Semiconductor Corp in Taiwan. My
-          previous research was centered around Cryptography.
-          In my free time, I enjoy traveling, playing video games 🎮, and I love cats 😺.
-          <br>
-          <br>
-          <i class="fa-solid fa-envelope"></i><span class="ml-1"><a href="mailto:chen4129@purdue.edu"
-            class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
-            Email
-          </a></span>
-          <i class="fa-solid fa-file"></i><span class="ml-1"><a href="https://app.box.com/s/lw4aee3sjywyj61tve18fffj311ln44a"
-            class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4 hover:underline hover:font-medium hover:text-sky-600">
-            CV
-          </a></span>
-          
-        </p>
-
-        
+    <section id="about" class="mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="md:col-span-1">
+          <img src="pic.jpg" alt="Wei-Hao Chen" class="rounded-lg w-full shadow-md" />
+          <div class="mt-4 space-y-2">
+            <a href="mailto:chen4129@purdue.edu" class="flex items-center text-sm hover:text-sky-600">
+              <i class="fa-solid fa-envelope w-5"></i><span>Email</span>
+            </a>
+            <a href="https://app.box.com/s/lw4aee3sjywyj61tve18fffj311ln44a" class="flex items-center text-sm hover:text-sky-600">
+              <i class="fa-solid fa-file w-5"></i><span>CV</span>
+            </a>
+          </div>
+        </div>
+        <div class="md:col-span-3">
+          <h1 class="text-3xl font-semibold mb-4">about</h1>
+          <p class="text-gray-700 leading-relaxed">
+            Hello, my name is <span class="name-underline">Wei-Hao Chen</span>. I am a fourth-year Ph.D. student in the Department of Computer Science at Purdue
+            University and a member of the Human-Centered Software Systems Lab under the guidance of Professor <a href="https://tianyi-zhang.github.io/" class="text-blue-500 hover:text-blue-700">Tianyi Zhang</a>. My
+            research primarily focuses on <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Human Computer Interaction (HCI)</span>, <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Software Engineering</span>, and <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">
+              Artificial Intelligence</span>. I am currently developing tools to help data scientists using several techniques 
+              such as 
+              <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">LLM</span>,
+            <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Artificial Intelligence</span>, and 
+            <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Programming-by-Demonstration</span>.
+            
+            Prior to my Ph.D. studies at Purdue, I worked as a software engineer at Realtek Semiconductor Corp in Taiwan. My
+            previous research was centered around Cryptography.
+            In my free time, I enjoy traveling, playing video games 🎮, and I love cats 😺.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Publications Section -->
-    <section id="publication" class="px-6 py-8 bg-gray-50">
-      <h2 class="text-left underline decoration-solid font-medium text-slate-700">
-        Publications
-      </h2>
+    <section id="publication" class="mb-12">
+      <h1 class="text-3xl font-semibold mb-6">publications</h1>
+      <div class="space-y-8">
+        <div class="publication">
+          <div class="grid grid-cols-1">
+            <div>
+              <h3 class="text-lg font-semibold mb-1">Dango: A Mixed-Initiative Data Wrangling System using Large Language Model</h3>
+              <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Weixi Tong, Amanda Case, Tianyi Zhang.</p>
+              <p class="text-sm italic mb-2">ACM Conference on Human Factors in Computing Systems (CHI), 2025</p>
+              <div class="flex space-x-4">
+                <a href="Dango.pdf" class="text-sm text-sky-600 hover:text-sky-800">
+                  <i class="fa-solid fa-file-pdf"></i><span class="ml-1">comming soon</span>
+                </a>
 
-      <div class="mt-2">
-        <div class="font-medium mb-1">CCA-Secure Key-Aggregate Proxy Re-Encryption for Secure Cloud Storage</div>
-        <div class="mb-1"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</div>
-        <div class="italic mb-1">arXiv preprint arXiv:2410.08120</div>
-        <div class="flex space-x-2">
-          <a href="https://arxiv.org/abs/2410.08120" class="flex items-center hover:underline hover:font-medium hover:text-sky-600">
-            <i class="fa-solid fa-file-pdf"></i><span class="ml-2">pdf</span>
-          </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="mt-2">
-        <div class="font-medium mb-1">MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence</div>
-        <div class="mb-1"><strong>Wei-Hao Chen</strong>, Xiaoyu Liu, Jiacheng Zhang, Ian Iong Lam, Zhicheng Huang, Rui
-          Dong,
-          Xinyu Wang, Tianyi Zhang</div>
-        <div class="italic mb-1">UIST 23: Proceedings of the 36th Annual ACM Symposium on User Interface Software and
-          Technology</div>
-        <div class="flex space-x-2">
-          <a href="MIWA.pdf" class="flex items-center hover:underline hover:font-medium hover:text-sky-600">
-            <i class="fa-solid fa-file-pdf"></i><span class="ml-2">pdf</span>
-          </a>
-          <a href="https://github.com/ferranschen/MIWA" class="flex items-center hover:underline hover:font-medium hover:text-sky-600">
-            <i class="fa-brands fa-github"></i><span class="ml-2">code</span>
-          </a>
+        <div class="publication">
+          <div class="grid grid-cols-1">
+            <div>
+              <h3 class="text-lg font-semibold mb-1">MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence</h3>
+              <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Xiaoyu Liu, Jiacheng Zhang, et al.</p>
+              <p class="text-sm italic mb-2">ACM Symposium on User Interface Software and Technology (UIST), 2023</p>
+              <div class="flex space-x-4">
+                <a href="MIWA.pdf" class="text-sm text-sky-600 hover:text-sky-800">
+                  <i class="fa-solid fa-file-pdf"></i><span class="ml-1">pdf</span>
+                </a>
+                <a href="https://github.com/ferranschen/MIWA" class="text-sm text-sky-600 hover:text-sky-800">
+                  <i class="fa-brands fa-github"></i><span class="ml-1">code</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="mt-2">
-        <div class="font-medium mb-1">Media playback apparatus and method having audio channel automatic selection mechanism</div>
-        <div class="mb-1"><strong>Wei-Hao Chen</strong></div>
-        <div class="italic mb-1">US Patent US-20220174348-A1</div>
-        <div class="flex space-x-2">
-
+        <div class="publication">
+          <div class="grid grid-cols-1">
+            <div>
+              <h3 class="text-lg font-semibold mb-1">CCA-Secure Key-Aggregate Proxy Re-Encryption for Secure Cloud Storage</h3>
+              <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</p>
+              <p class="text-sm italic mb-2">arXiv preprint arXiv:2410.08120</p>
+              <div class="flex space-x-4">
+                <a href="https://arxiv.org/abs/2410.08120" class="text-sm text-sky-600 hover:text-sky-800">
+                  <i class="fa-solid fa-file-pdf"></i><span class="ml-1">pdf</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="mt-2">
-        <div class="font-medium mb-1">Efficient Key-Aggregate Proxy Re-Encryption for Secure Data Sharing in Clouds</div>
-        <div class="mb-1"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</div>
-        <div class="italic mb-1">2018 IEEE Conference on Dependable and Secure Computing (DSC)</div>
-        <div class="flex space-x-2">
-          <a href="EFF.pdf" class="flex items-center hover:underline hover:font-medium hover:text-sky-600">
-            <i class="fa-solid fa-file-pdf"></i><span class="ml-2">pdf</span>
-          </a>
+        <div class="publication">
+          <div class="grid grid-cols-1">
+            <div>
+              <h3 class="text-lg font-semibold mb-1">Media playback apparatus and method having audio channel automatic selection mechanism</h3>
+              <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong></p>
+              <p class="text-sm italic mb-2">US Patent US-20220174348-A1</p>
+            </div>
+          </div>
+        </div>
+        <div class="publication">
+          <div class="grid grid-cols-1">
+            <div>
+              <h3 class="text-lg font-semibold mb-1">Efficient Key-Aggregate Proxy Re-Encryption for Secure Data Sharing in Clouds</h3>
+              <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</p>
+              <p class="text-sm italic mb-2">IEEE Conference on Dependable and Secure Computing (DSC), 2018</p>
+              <div class="flex space-x-4">
+                <a href="EFF.pdf" class="text-sm text-sky-600 hover:text-sky-800">
+                  <i class="fa-solid fa-file-pdf"></i><span class="ml-1">pdf</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- News Section -->
-    <section id="news" class="px-6 py-8">
-      <h2 class="text-left underline decoration-solid mb-4 font-medium text-slate-700">
-        News
-      </h2>
+    <section id="news">
+      <h1 class="text-3xl font-semibold mb-6">news</h1>
       <div class="space-y-4">
-        <div class="flex items-start space-x-2">
-          <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">03/2024</div>
-          <div class="p-1">I have been selected as the recipient of a Summer Research Grant (5,000 USD). Thanks to the Purdue Computer Science Department! 🎉</div>
+        
+        <div class="flex items-start space-x-4">
+          <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Jan 2025</div>
+          <div class="flex-1">My paper - Dango: A Mixed-Initiative Data Wrangling System using Large Language Model is accepted by CHI 2025 🎉.</div>
         </div>
-
-        <div class="flex items-start space-x-2">
-          <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">09/2023</div>
-          <div class="p-1">I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
+        <div class="flex items-start space-x-4">
+          <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Mar 2024</div>
+          <div class="flex-1">I have been selected as the recipient of a Summer Research Grant (5,000 USD). Thanks to the Purdue Computer Science Department! 🎉</div>
         </div>
-
-        <div class="flex items-start space-x-2">
-          <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">07/2023</div>
-          <div class="p-1">Our paper - MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence is accepted by
+        <div class="flex items-start space-x-4">
+          <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Sep 2023</div>
+          <div class="flex-1">I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Jul 2023</div>
+          <div class="flex-1">Our paper - MIWA: Mixed-Initiative Web Automation for Better User Control and Confidence is accepted by
             UIST
             2023 🎉.</div>
         </div>
-        <div class="flex items-start space-x-2">
-          <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">05/2022</div>
-          <div class="p-1">I start my internship at Intel Corporation!</div>
+        <div class="flex items-start space-x-4">
+          <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">May 2022</div>
+          <div class="flex-1">I start my internship at Intel Corporation!</div>
         </div>
-        <div class="flex items-start space-x-2">
-          <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">01/2022</div>
-          <div class="p-1">I am Graduate TA for CS 180: Problem Solving And Object-Oriented Programming.</div>
+        <div class="flex items-start space-x-4">
+          <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Jan 2022</div>
+          <div class="flex-1">I am Graduate TA for CS 180: Problem Solving And Object-Oriented Programming.</div>
         </div>
-        <div class="flex items-start space-x-2">
-          <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">09/2021</div>
-          <div class="p-1">I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
+        <div class="flex items-start space-x-4">
+          <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Sep 2021</div>
+          <div class="flex-1">I am Graduate TA for CS 240: Programming in C at Purdue University.</div>
         </div>
-        <div class="flex items-start space-x-2">
-          <div class="bg-sky-200 p-1 rounded-lg text-sky-700 font-normal">09/2021</div>
-          <div class="p-1">I join Purdue University 🚂 as an PhD student in Computer Science.</div>
+        <div class="flex items-start space-x-4">
+          <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Sep 2021</div>
+          <div class="flex-1">I join Purdue University 🚂 as an PhD student in Computer Science.</div>
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="px-6 py-4 bg-gray-50">
-      <div class="text-center text-sm text-gray-500">
-        &copy; 2024 Wei-Hao Chen
-      </div>
-    </footer>
   </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 mt-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="text-center text-sm text-gray-500">
+        &copy; 2024 Wei-Hao Chen | Last updated: 2025-01-19
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
