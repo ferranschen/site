@@ -30,11 +30,26 @@
         <div class="flex-shrink-0 flex items-center">
           <a href="#" class="text-xl font-semibold"><strong>Wei-Hao</strong> Chen</a>
         </div>
-        <div class="flex space-x-8">
+        <!-- Mobile menu button -->
+        <div class="flex items-center md:hidden">
+          <button type="button" onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-800 hover:bg-gray-100">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+        <!-- Desktop menu -->
+        <div class="hidden md:flex space-x-8">
           <a href="#about" class="inline-flex items-center px-1 pt-1 text-sm hover:text-sky-600">about</a>
           <a href="#publication" class="inline-flex items-center px-1 pt-1 text-sm hover:text-sky-600">publications</a>
           <a href="#news" class="inline-flex items-center px-1 pt-1 text-sm hover:text-sky-600">news</a>
         </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#about" class="block px-3 py-2 text-sm hover:text-sky-600">about</a>
+        <a href="#publication" class="block px-3 py-2 text-sm hover:text-sky-600">publications</a>
+        <a href="#news" class="block px-3 py-2 text-sm hover:text-sky-600">news</a>
       </div>
     </div>
   </nav>
@@ -201,6 +216,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Add this script before closing body tag -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 </body>
 
 </html>
