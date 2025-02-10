@@ -59,18 +59,21 @@
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <!-- About Section -->
     <section id="about" class="mb-12">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-
+      <div class="flex items-center gap-4">
+        <div class="w-2 h-10 bg-sky-600"></div>
+        <h1 class="text-4xl font-semibold">About 👋</h1>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4">
         <div class="md:col-span-3">
-          <h1 class="text-4xl font-semibold mb-4">About 👋</h1>
           <p class="text-gray-700 leading-relaxed">
             Hello, my name is <span class="name-underline">Wei-Hao Chen</span>. I am a fourth-year Ph.D. student in the
             Department of Computer Science at Purdue
             University and a member of the Human-Centered Software Systems Lab under the guidance of Professor <a
               href="https://tianyi-zhang.github.io/" class="text-blue-500 hover:text-blue-700">Tianyi Zhang</a>. My
-            research primarily focuses on <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Human
-              Computer Interaction (HCI)</span>, <span
-              class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Software Engineering</span>, and <span
+            research primarily focuses on technical aspects of <span
+              class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Human
+              Computer/AI Interaction (HCI/HAI)</span>, particularly in building novel interactive systems that combine
+            <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Software Engineering</span> and <span
               class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">
               Data Science</span>. I am currently developing tools to help data scientists using several techniques
             such as
@@ -78,7 +81,10 @@
             <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Artificial Intelligence</span>, and
             <span class="bg-sky-200 p-0.5 rounded-md text-sky-700 font-medium">Programming-by-Demonstration</span>.
 
-            I have extensive UI/UX and human-centered design experience in creating tools with AI.
+            I have extensive UI/UX and human-centered design experience in creating tools with AI. Most of my projects
+            are system-centric, aiming to improve the efficiency and usability in a data science pipeline. Previously, I
+            have worked as an Android TV developer in Realtek Semiconductor. My previous research focuses on the
+            theoretical security and privacy of cloud storage systems.
           </p>
         </div>
         <div class="md:col-span-1">
@@ -101,79 +107,145 @@
 
     <!-- Publications Section -->
     <section id="publication" class="mb-12">
-      <h1 class="text-4xl font-semibold mb-6">Publications 📚</h1>
-      <div class="space-y-4">
-        <div class="publication">
-          <div class="grid grid-cols-1">
-            <div>
+      <div class="flex items-center gap-4">
+        <div class="w-2 h-10 bg-sky-600"></div>
+        <h1 class="text-4xl font-semibold">Publications 📚</h1>
+      </div>
+      <div class="space-y-4 mt-4">
+        <div class="publication bg-white rounded-lg border border-gray-200 p-6 transition-transform hover:scale-[1.02]">
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-3">
+              <img src="dango.png" alt="Dango Project" class="w-full h-auto rounded-lg object-cover">
+            </div>
+            <div class="col-span-9">
               <h3 class="text-lg font-normal mb-1">Dango: A Mixed-Initiative Data Wrangling System using Large Language
                 Model</h3>
               <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Weixi Tong, Amanda Case, Tianyi Zhang.</p>
               <p class="text-sm italic mb-2">ACM Conference on Human Factors in Computing Systems (CHI), 2025</p>
-              <div class="flex space-x-4">
-                <a href="Dango.pdf" class="text-sm text-sky-600 hover:text-sky-800">
-                  <i class="fa-solid fa-file-pdf"></i><span class="ml-1">comming soon</span>
-                </a>
-
+              <div class="flex items-center">
+                <div class="flex space-x-4">
+                  <a href="Dango.pdf"
+                    class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
+                    <i class="fa-solid fa-file-pdf"></i><span class="ml-1">paper (coming soon)</span>
+                  </a>
+                </div>
+                <div class="flex items-center ml-auto">
+                  <span class="text-sky-600/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] mr-2 pt-0.5">HCI</span>
+                  <span class="text-purple-500/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] mr-2 pt-0.5">LLM</span>
+                  <span class="text-orange-500/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] pt-0.5">DATA SCIENCE</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="publication">
-          <div class="grid grid-cols-1">
-            <div>
+
+        <div class="publication bg-white rounded-lg border border-gray-200 p-6 transition-transform hover:scale-[1.02]">
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-3">
+              <img src="miwa.png" alt="MIWA Project" class="w-full h-auto rounded-lg object-cover">
+            </div>
+            <div class="col-span-9">
               <h3 class="text-lg font-normal mb-1">MIWA: Mixed-Initiative Web Automation for Better User Control and
                 Confidence</h3>
               <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Xiaoyu Liu, Jiacheng Zhang, Ian Iong Lam, Zhicheng
                 Huang, Rui Dong, Xinyu Wang, Tianyi Zhang</p>
-              <p class="text-sm italic mb-2">ACM Symposium on User Interface Software and Technology (UIST), 2023</p>
-              <div class="flex space-x-4">
-                <a href="MIWA.pdf" class="text-sm text-sky-600 hover:text-sky-800">
-                  <i class="fa-solid fa-file-pdf"></i><span class="ml-1">pdf</span>
-                </a>
-                <a href="https://github.com/ferranschen/MIWA" class="text-sm text-sky-600 hover:text-sky-800">
-                  <i class="fa-brands fa-github"></i><span class="ml-1">code</span>
-                </a>
+              <p class="text-sm italic inline-block mr-2">ACM Symposium on User Interface Software and Technology
+                (UIST), 2023</p>
+              <div class="flex items-center">
+                <div class="flex space-x-4">
+                  <a href="MIWA.pdf"
+                    class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
+                    <i class="fa-solid fa-file-pdf"></i><span class="ml-1">paper</span>
+                  </a>
+                  <a href="https://github.com/ferranschen/MIWA"
+                    class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
+                    <i class="fa-brands fa-github"></i><span class="ml-1">code</span>
+                  </a>
+                </div>
+                <div class="flex items-center ml-auto">
+                  <span class="text-sky-600/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] mr-2 pt-0.5">HCI</span>
+                  <span class="text-slate-500/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] mr-2 pt-0.5">PBD</span>
+                  <span class="text-orange-500/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] pt-0.5">DATA SCIENCE</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="publication">
-          <div class="grid grid-cols-1">
-            <div>
+        <div class="publication bg-white rounded-lg border border-gray-200 p-6 transition-transform hover:scale-[1.02]">
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-3">
+              <img src="cca_kapre.png" alt="CCA-KAPRE Project" class="w-full h-auto rounded-lg object-cover">
+            </div>
+            <div class="col-span-9">
               <h3 class="text-lg font-normal mb-1">CCA-Secure Key-Aggregate Proxy Re-Encryption for Secure Cloud Storage
               </h3>
               <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</p>
               <p class="text-sm italic mb-2">arXiv preprint arXiv:2410.08120</p>
-              <div class="flex space-x-4">
-                <a href="https://arxiv.org/abs/2410.08120" class="text-sm text-sky-600 hover:text-sky-800">
-                  <i class="fa-solid fa-file-pdf"></i><span class="ml-1">pdf</span>
-                </a>
+              <div class="flex items-center">
+                <div class="flex space-x-4">
+                  <a href="https://arxiv.org/abs/2410.08120"
+                    class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
+                    <i class="fa-solid fa-file-pdf"></i><span class="ml-1">paper</span>
+                  </a>
+                </div>
+                <div class="flex items-center ml-auto">
+                  <span class="text-red-500/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] mr-2 pt-0.5">CRYPTOGRAPHY</span>
+                  <span class="text-stone-500/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] pt-0.5">DATA STORAGE</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="publication">
-          <div class="grid grid-cols-1">
-            <div>
+        <div class="publication bg-white rounded-lg border border-gray-200 p-6 transition-transform hover:scale-[1.02]">
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-3">
+              <img src="patent_audio.png" alt="Audio Patent" class="w-full h-auto rounded-lg object-cover">
+            </div>
+            <div class="col-span-9">
               <h3 class="text-lg font-normal mb-1">Media playback apparatus and method having audio channel automatic
                 selection mechanism</h3>
               <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong></p>
-              <p class="text-sm italic mb-2">US Patent US-20220174348-A1</p>
+              <p class="text-sm italic mb-2">Patent TW109142419A</p>
+              <div class="flex items-center">
+                <div class="flex items-center ml-auto">
+                  <span class="text-emerald-500/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] pt-0.5">AUDIO</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="publication">
-          <div class="grid grid-cols-1">
-            <div>
+        <div class="publication bg-white rounded-lg border border-gray-200 p-6 transition-transform hover:scale-[1.02]">
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-3">
+              <img src="kapre.png" alt="KAPRE Project" class="w-full h-auto rounded-lg object-cover">
+            </div>
+            <div class="col-span-9">
               <h3 class="text-lg font-normal mb-1">Efficient Key-Aggregate Proxy Re-Encryption for Secure Data Sharing
                 in Clouds</h3>
               <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</p>
               <p class="text-sm italic mb-2">IEEE Conference on Dependable and Secure Computing (DSC), 2018</p>
-              <div class="flex space-x-4">
-                <a href="EFF.pdf" class="text-sm text-sky-600 hover:text-sky-800">
-                  <i class="fa-solid fa-file-pdf"></i><span class="ml-1">pdf</span>
-                </a>
+              <div class="flex items-center">
+                <div class="flex space-x-4">
+                  <a href="EFF.pdf"
+                    class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
+                    <i class="fa-solid fa-file-pdf"></i><span class="ml-1">paper</span>
+                  </a>
+                </div>
+                <div class="flex items-center ml-auto">
+                  <span class="text-red-500/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] mr-2 pt-0.5">CRYPTOGRAPHY</span>
+                  <span class="text-stone-500/70 mr-1">●</span>
+                  <span class="font-mono text-[9px] pt-0.5">DATA STORAGE</span>
+                </div>
               </div>
             </div>
           </div>
@@ -183,12 +255,15 @@
 
     <!-- News Section -->
     <section id="news">
-      <h1 class="text-4xl font-semibold mb-6">News 📰</h1>
-      <div class="space-y-4">
+      <div class="flex items-center gap-4">
+        <div class="w-2 h-10 bg-sky-600"></div>
+        <h1 class="text-4xl font-semibold">News 📰</h1>
+      </div>
+      <div class="space-y-4 mt-4">
         <div class="flex items-start">
           <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Jan 2025</div>
           <div class="flex-1 text-sm">My paper - Dango: A Mixed-Initiative Data Wrangling System using Large Language
-            Model is accepted by CHI 2025 🎉.</div>
+            Model is accepted by CHI 2025 🎉. See you in Yokohama 🌸!</div>
         </div>
         <div class="flex items-start">
           <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Mar 2024</div>
@@ -202,9 +277,7 @@
         <div class="flex items-start">
           <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Jul 2023</div>
           <div class="flex-1 text-sm">Our paper - MIWA: Mixed-Initiative Web Automation for Better User Control and
-            Confidence is accepted by
-            UIST
-            2023 🎉.</div>
+            Confidence is accepted by UIST 2023 🎉.</div>
         </div>
         <div class="flex items-start">
           <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">May 2022</div>
