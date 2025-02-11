@@ -62,7 +62,7 @@
     <section id="about" class="mb-12">
       <div class="flex items-center gap-4">
         <div class="w-2 h-10 bg-sky-600"></div>
-        <h1 class="text-4xl font-semibold">About 👋</h1>
+        <h1 class="text-4xl font-semibold">About <span class="wave">👋</span></h1>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4">
         <div class="md:col-span-3">
@@ -110,7 +110,7 @@
     <section id="publication" class="mb-12">
       <div class="flex items-center gap-4">
         <div class="w-2 h-10 bg-sky-600"></div>
-        <h1 class="text-4xl font-semibold">Publications 📚</h1>
+        <h1 class="text-4xl font-semibold">Publications 📚 <span class="sleeping-z text-2xl">💤</span></h1>
       </div>
       <div class="space-y-4 mt-4">
         <div class="publication bg-white rounded-lg border border-gray-200 p-6 transition-transform hover:scale-[1.02]">
@@ -123,20 +123,26 @@
                 Model</h3>
               <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Weixi Tong, Amanda Case, Tianyi Zhang.</p>
               <p class="text-sm italic mb-2">ACM Conference on Human Factors in Computing Systems (CHI), 2025</p>
-              <div class="flex items-center">
+              <div class="flex items-center justify-between">
                 <div class="flex space-x-4">
                   <a href="Dango.pdf"
                     class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
                     <i class="fa-solid fa-file-pdf"></i><span class="ml-1">paper (coming soon)</span>
                   </a>
                 </div>
-                <div class="flex items-center ml-auto">
-                  <span class="text-sky-600/70 mr-1">●</span>
-                  <span class="font-mono text-[9px] mr-2 pt-0.5">HCI</span>
-                  <span class="text-purple-500/70 mr-1">●</span>
-                  <span class="font-mono text-[9px] mr-2 pt-0.5">LLM</span>
-                  <span class="text-orange-500/70 mr-1">●</span>
-                  <span class="font-mono text-[9px] pt-0.5">DATA SCIENCE</span>
+                <div class="flex flex-wrap items-center gap-2">
+                  <div class="flex items-center">
+                    <span class="text-sky-600/70 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">HCI</span>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="text-purple-500/70 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">LLM</span>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="text-orange-500/70 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">DATA SCIENCE</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -155,24 +161,26 @@
                 Huang, Rui Dong, Xinyu Wang, Tianyi Zhang</p>
               <p class="text-sm italic inline-block mr-2">ACM Symposium on User Interface Software and Technology
                 (UIST), 2023</p>
-              <div class="flex items-center">
+              <div class="flex items-center justify-between">
                 <div class="flex space-x-4">
                   <a href="MIWA.pdf"
                     class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
                     <i class="fa-solid fa-file-pdf"></i><span class="ml-1">paper</span>
                   </a>
-                  <a href="https://github.com/ferranschen/MIWA"
-                    class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
-                    <i class="fa-brands fa-github"></i><span class="ml-1">code</span>
-                  </a>
                 </div>
-                <div class="flex items-center ml-auto">
-                  <span class="text-sky-600/70 mr-1">●</span>
-                  <span class="font-mono text-[9px] mr-2 pt-0.5">HCI</span>
-                  <span class="text-slate-500/70 mr-1">●</span>
-                  <span class="font-mono text-[9px] mr-2 pt-0.5">PBD</span>
-                  <span class="text-orange-500/70 mr-1">●</span>
-                  <span class="font-mono text-[9px] pt-0.5">DATA SCIENCE</span>
+                <div class="flex flex-wrap items-center gap-2">
+                  <div class="flex items-center">
+                    <span class="text-sky-600/70 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">HCI</span>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="text-slate-500/70 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">PBD</span>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="text-orange-500/70 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">DATA SCIENCE</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -188,18 +196,22 @@
               </h3>
               <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</p>
               <p class="text-sm italic mb-2">arXiv preprint arXiv:2410.08120</p>
-              <div class="flex items-center">
+              <div class="flex items-center justify-between">
                 <div class="flex space-x-4">
                   <a href="https://arxiv.org/abs/2410.08120"
                     class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
                     <i class="fa-solid fa-file-pdf"></i><span class="ml-1">paper</span>
                   </a>
                 </div>
-                <div class="flex items-center ml-auto">
-                  <span class="text-red-500/80 mr-1">●</span>
-                  <span class="font-mono text-[9px] mr-2 pt-0.5">CRYPTOGRAPHY</span>
-                  <span class="text-stone-500/70 mr-1">●</span>
-                  <span class="font-mono text-[9px] pt-0.5">DATA STORAGE</span>
+                <div class="flex flex-wrap items-center gap-2">
+                  <div class="flex items-center">
+                    <span class="text-red-500/80 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">CRYPTOGRAPHY</span>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="text-stone-500/70 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">DATA STORAGE</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -215,10 +227,12 @@
                 selection mechanism</h3>
               <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong></p>
               <p class="text-sm italic mb-2">Patent TW109142419A</p>
-              <div class="flex items-center">
-                <div class="flex items-center ml-auto">
-                  <span class="text-emerald-500/70 mr-1">●</span>
-                  <span class="font-mono text-[9px] pt-0.5">AUDIO</span>
+              <div class="flex items-center justify-end">
+                <div class="flex flex-wrap items-center gap-2">
+                  <div class="flex items-center">
+                    <span class="text-emerald-500/70 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">AUDIO</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -234,18 +248,22 @@
                 in Clouds</h3>
               <p class="text-sm mb-2"><strong>Wei-Hao Chen</strong>, Chun-I Fan, Yi-Fan Tseng</p>
               <p class="text-sm italic mb-2">IEEE Conference on Dependable and Secure Computing (DSC), 2018</p>
-              <div class="flex items-center">
+              <div class="flex items-center justify-between">
                 <div class="flex space-x-4">
                   <a href="EFF.pdf"
                     class="text-sm text-sky-600 hover:text-sky-800 bg-gray-50 px-3 py-0.5 rounded-md flex items-center">
                     <i class="fa-solid fa-file-pdf"></i><span class="ml-1">paper</span>
                   </a>
                 </div>
-                <div class="flex items-center ml-auto">
-                  <span class="text-red-500/80 mr-1">●</span>
-                  <span class="font-mono text-[9px] mr-2 pt-0.5">CRYPTOGRAPHY</span>
-                  <span class="text-stone-500/70 mr-1">●</span>
-                  <span class="font-mono text-[9px] pt-0.5">DATA STORAGE</span>
+                <div class="flex flex-wrap items-center gap-2">
+                  <div class="flex items-center">
+                    <span class="text-red-500/80 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">CRYPTOGRAPHY</span>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="text-stone-500/70 mr-1">●</span>
+                    <span class="font-mono text-[9px] pt-0.5">DATA STORAGE</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -255,10 +273,10 @@
     </section>
 
     <!-- News Section -->
-    <section id="news">
+    <section id="news" class="relative">
       <div class="flex items-center gap-4">
         <div class="w-2 h-10 bg-sky-600"></div>
-        <h1 class="text-4xl font-semibold">News 📰</h1>
+        <h1 class="text-4xl font-semibold">News 📰 <span class="ufo text-2xl">🛸</span></h1>
       </div>
       <div class="space-y-4 mt-4">
         <div class="flex items-start">
@@ -311,6 +329,109 @@
       menu.classList.toggle('hidden');
     }
   </script>
+
+  <!-- Add this CSS to your existing styles -->
+  <style>
+    .ufo {
+      display: inline-block;
+      animation:
+        fly 8s infinite linear,
+        hover 1.5s infinite ease-in-out;
+    }
+
+    @keyframes fly {
+      0% {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(200px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes hover {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .wave {
+      display: inline-block;
+      animation: wave 2.5s infinite;
+      transform-origin: 70% 70%;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      10% {
+        transform: rotate(14deg);
+      }
+
+      20% {
+        transform: rotate(-8deg);
+      }
+
+      30% {
+        transform: rotate(14deg);
+      }
+
+      40% {
+        transform: rotate(-4deg);
+      }
+
+      50% {
+        transform: rotate(10deg);
+      }
+
+      60% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .sleeping-z {
+      display: inline-block;
+      opacity: 0;
+      animation: sleep 4s infinite;
+    }
+
+    @keyframes sleep {
+
+      0%,
+      100% {
+        opacity: 0;
+        transform: translate(0, 0);
+      }
+
+      30%,
+      70% {
+        opacity: 1;
+        transform: translate(5px, -15px);
+      }
+    }
+  </style>
 </body>
 
 </html>
