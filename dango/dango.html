@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <meta name="description"
+    content="Dango: A Mixed-Initiative Data Wrangling System using Large Language Model - Project Page">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script src="../tailwind.js"></script>
+  <title>Dango - Project Page</title>
+</head>
+
+<body class="text-slate-600 bg-white text-base leading-relaxed font-['Lato'] font-light">
+  <!-- Navigation Bar -->
+  <nav class="border-b border-gray-200 bg-white sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="../index.html" class="text-xl font-normal"><i class="fa-solid fa-arrow-left text-sm mr-2"></i>Back to
+            Home</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold mb-4">🍡 <span style="font-variant: small-caps;">Dango</span>: A Mixed-Initiative
+        Data Wrangling System using Large Language Model
+      </h1>
+      <!-- add sakura emoji because it's hold in japan -->
+      <p class="text-xl mb-6">CHI 2025, April 26 - May 1, Yokohama, Japan<span class="text-slate-400"> 🌸</span></p>
+      <div class="flex justify-center space-x-4">
+        <a href="../dango.pdf"
+          class="bg-slate-500 text-white px-2 py-1 rounded-md hover:bg-slate-700 transition-colors">
+          <i class="fa-solid fa-file-pdf mr-2"></i>Paper
+        </a>
+        <a href="https://arxiv.org/abs/2503.03154"
+          class="bg-slate-500 text-white px-2 py-1 rounded-md hover:bg-slate-700 transition-colors">
+          <img src="../arxiv.svg" alt="arxiv" class="w-4 h-4 inline-block mr-2">arXiv
+        </a>
+        <a href="https://github.com/dango-data/dango"
+          class="bg-slate-500 text-white px-2 py-1 rounded-md hover:bg-slate-700 transition-colors">
+          <i class="fa-brands fa-github mr-2"></i>Code (coming soon)
+        </a>
+        <!-- Add more links as needed (e.g., code, demo, etc.) -->
+      </div>
+    </div>
+
+    <!-- Authors Section -->
+    <div class="text-center mb-16">
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="text-center">
+          <p class="font-semibold">Wei-Hao Chen</p>
+          <p class="text-sm">Purdue University</p>
+        </div>
+        <div class="text-center">
+          <p class="font-semibold">Weixi Tong</p>
+          <p class="text-sm">HUST</p>
+        </div>
+        <div class="text-center">
+          <p class="font-semibold">Amanda Case</p>
+          <p class="text-sm">University of Iowa</p>
+        </div>
+        <div class="text-center">
+          <p class="font-semibold">Tianyi Zhang</p>
+          <p class="text-sm">Purdue University</p>
+        </div>
+      </div>
+    </div>
+    <!-- Teaser Section -->
+    <section class="mb-16">
+      <div class="grid grid-cols-1 gap-8">
+        <div>
+          <img src="./dango_teaser.svg" alt="Dango Teaser" class="w-full rounded-lg shadow-lg">
+        </div>
+        <div class="prose max-w-none text-lg leading-relaxed">
+          <p>
+            To create a data wrangling script, users can first demonstrate their desired actions on the tables in
+            <span style="font-variant: small-caps;">Dango</span> (<em>Step1</em>). They can edit table cells,
+            add/delete/move columns and rows, and copy/cut content
+            across multiple tables. For complex demonstrations, users can also describe their intent in natural language
+            in a chatroom. When ambiguity is detected in a demonstration or a NL description,
+            <span style="font-variant: small-caps;">Dango</span> will
+            generate a multiple-choice question about each unclear part and prompt users for clarification
+            (<em>Step2</em>). Once the ambiguity is resolved, <span style="font-variant: small-caps;">Dango</span>
+            synthesizes a data wrangling script to automate
+            the desired actions. To make it easier for users to understand and validate the synthesized script, <span
+              style="font-variant: small-caps;">Dango</span>
+            explains the script in natural language step by step (<em>Step3</em>). When users notice a wrong step in
+            the script, they can easily fix it by directly editing the NL explanation of that step. They can also add
+            missing steps or delete redundant steps. <span style="font-variant: small-caps;">Dango</span> will update
+            the script based on user edits.
+          </p>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">Abstract</h2>
+      <div class="prose max-w-none">
+        <p class="text-lg leading-relaxed">
+          Data wrangling is a time-consuming and challenging task in a data science pipeline. While many tools have been
+          proposed to automate or facilitate data wrangling, they often misinterpret user intent, especially in complex
+          tasks. We propose <span style="font-variant: small-caps;">Dango</span>, a mixed-initiative multi-agent system
+          for data wrangling. Compared to existing tools,
+          <span style="font-variant: small-caps;">Dango</span> enhances user communication of intent by allowing users
+          to demonstrate on multiple tables and use
+          natural language prompts in a conversation interface, enabling users to clarify their intent by answering
+          LLM-posed multiple-choice clarification questions, and providing multiple forms of feedback such as
+          step-by-step natural language explanations and data provenance to help users evaluate the data wrangling
+          scripts. We conducted a within-subjects user study with 38 participants and demonstrated that <span
+            style="font-variant: small-caps;">Dango</span>'s features
+          can significantly improve intent clarification, accuracy, and efficiency in data wrangling. Furthermore, we
+          demonstrated the generalizability of <span style="font-variant: small-caps;">Dango</span> by applying it to a
+          broader set of data wrangling tasks.
+        </p>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">Video</h2>
+      <div class="aspect-w-16 aspect-h-9">
+        <!-- Replace with your video embed code -->
+        <div class="bg-gray-100 rounded-lg p-8 text-center">
+          Video coming soon
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">Overview</h2>
+      <div class="grid grid-cols-1 gap-8">
+        <div>
+          <img src="../dango.png" alt="Dango System Overview" class="w-full rounded-lg shadow-lg">
+        </div>
+        <div class="prose max-w-none text-lg leading-relaxed">
+          <p>
+            User interface of <span style="font-variant: small-caps;">Dango</span>. In the table view (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">a</span>),
+            users can upload tables (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">b</span>)
+            or create new tables (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">c</span>).
+            Then, they can click the record button (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">d</span>)
+            and start demonstrating their desired actions. Alternatively, they can express desired actions in natural
+            language in a chatbox (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">e</span>).
+            <span style="font-variant: small-caps;">Dango</span> will interpret the demonstrations and/or NL
+            descriptions
+            in the backend and generate multiple-choice
+            clarification questions when needed (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">f</span>).
+            Furthermore, to help users understand and validate the synthesized script, <span
+              style="font-variant: small-caps;">Dango</span> explains it in NL step by
+            step (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">g</span>).
+            Users can directly edit a step in natural language (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">h</span>),
+            delete a step (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">i</span>),
+            add a new step (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">j</span>),
+            save the script (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">k</span>),
+            remove the script (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">l</span>),
+            or regenerate the script (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">m</span>).
+            Users can click the run button (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">n</span>)
+            to execute the script on copies of the original tables and verify its behavior without messing up the
+            original demonstrations. <span style="font-variant: small-caps;">Dango</span> also renders a data
+            provenance
+            view to track the transformations performed on
+            each table (<span
+              class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-sky-100 text-sky-800 font-medium">o</span>).
+            Users can click table nodes, and the corresponding table content will appear in the table view.
+        </div>
+      </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">Citation</h2>
+      <div class="bg-gray-50 p-4 rounded-lg">
+        <pre class="text-sm overflow-x-auto">
+@inproceedings{chen2025dango,
+    title={Dango: A Mixed-Initiative Data Wrangling System using Large Language Model},
+    author={Chen, Wei-Hao and Tong, Weixi and Case, Amanda and Zhang, Tianyi},
+    booktitle={Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+    year={2025},
+    organization={ACM}
+}
+                </pre>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
