@@ -195,18 +195,35 @@
     <!-- Citation Section -->
     <section class="mb-16">
       <h2 class="text-2xl font-bold mb-4">Citation</h2>
-      <div class="bg-gray-50 p-4 rounded-lg">
-        <pre class="text-sm overflow-x-auto">
-@inproceedings{chen2025dango,
-    title={Dango: A Mixed-Initiative Data Wrangling System using Large Language Model},
+      <div class="bg-gray-50 p-4 rounded-lg relative">
+        <button onclick="copyToClipboard()"
+          class="absolute top-2 right-2 bg-slate-500 text-white px-2 py-1 rounded-md hover:bg-slate-700 transition-colors flex items-center">
+          <i class="fa-regular fa-copy mr-1"></i>
+        </button>
+        <pre id="citationText" class="text-sm overflow-x-auto">@inproceedings{chen2025dango,
+    title={<span style="font-variant: small-caps;">Dango</span>: A Mixed-Initiative Data Wrangling System using Large Language Model},
     author={Chen, Wei-Hao and Tong, Weixi and Case, Amanda and Zhang, Tianyi},
     booktitle={Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
     year={2025},
     organization={ACM}
-}
-                </pre>
+}</pre>
       </div>
     </section>
+
+    <!-- Add this script -->
+    <script>
+      function copyToClipboard() {
+        const citation = document.getElementById('citationText').textContent;
+        navigator.clipboard.writeText(citation).then(() => {
+          const button = document.querySelector('button');
+          const originalText = button.innerHTML;
+          button.innerHTML = '<i class="fa-solid fa-check mr-1"></i>Copied!';
+          setTimeout(() => {
+            button.innerHTML = originalText;
+          }, 2000);
+        });
+      }
+    </script>
   </div>
 </body>
 
