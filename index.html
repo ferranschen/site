@@ -67,6 +67,8 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4">
         <div class="md:col-span-3">
+          <h2 class="text-lg font-semibold mb-2 tracking-wide">Building AI-powered tools for data scientists and
+            end-users <span class="cursor">_</span></h2>
           <p class="text-gray-700 leading-relaxed">
             Hello, my name is <span class="name-underline">Wei-Hao Chen</span>. I am a fourth-year Ph.D. student in the
             Department of Computer Science at Purdue
@@ -115,13 +117,14 @@
       </div>
     </section>
 
+
     <!-- Publications Section -->
     <section id="publication" class="mb-12">
       <div class="flex items-center gap-4">
         <div class="w-2 h-8 bg-sky-600"></div>
         <h1 class="text-3xl font-semibold">Publications 📚 <span class="sleeping-z text-2xl">💤</span></h1>
       </div>
-
+      <hr class="my-8 border-t border-gray-200">
       <div id="publicationContent" class="space-y-4 mt-4">
         <div class="publication bg-white rounded-lg border border-gray-200 p-6 transition-transform hover:scale-[1.02]">
           <div class="grid grid-cols-12 gap-4">
@@ -355,6 +358,7 @@
         <div class="w-2 h-8 bg-sky-600"></div>
         <h1 class="text-3xl font-semibold">News 📰 <span class="ufo text-2xl">🛸</span></h1>
       </div>
+      <hr class="my-8 border-t border-gray-200">
       <div class="space-y-4 mt-4">
         <div class="flex items-start">
           <div class="text-sm font-medium text-gray-500 w-24 flex-shrink-0">Apr 2025</div>
@@ -423,6 +427,23 @@
       animation:
         fly 8s infinite linear,
         hover 1.5s infinite ease-in-out;
+    }
+
+    .cursor {
+      display: inline-block;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
     }
 
     @keyframes fly {
