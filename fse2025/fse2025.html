@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <meta name="description"
+    content="Towards Understanding Fine-Grained Programming Mistakes and Fixing Patterns in Data Science - Project Page">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script src="../tailwind.js"></script>
+  <title>Programming Mistakes in Data Science - Project Page</title>
+</head>
+
+<body class="text-slate-600 bg-white text-base leading-relaxed font-['Lato'] font-light">
+  <nav class="border-b border-gray-200 bg-white sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="../index.html" class="text-xl font-normal">
+            <i class="fa-solid fa-arrow-left text-sm mr-2"></i>Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl font-bold mb-4">Towards Understanding Fine-Grained Programming Mistakes and Fixing Patterns
+        in Data Science</h1>
+      <p class="text-xl mb-6">FSE 2025, June, Trondheim, Norway 🇳🇴</p>
+      <div class="flex justify-center space-x-4">
+        <a href="../fse2025_mistakes.pdf"
+          class="bg-slate-500 text-white px-2 py-1 rounded-md hover:bg-slate-700 transition-colors">
+          <i class="fa-solid fa-file-pdf mr-2"></i>Paper
+        </a>
+        <a href="https://doi.org/10.1145/3729352"
+          class="bg-slate-500 text-white px-2 py-1 rounded-md hover:bg-slate-700 transition-colors">
+          <i class="fa-solid fa-link mr-2"></i>ACM DL
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center mb-16">
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="text-center">
+          <p class="font-semibold">Wei-Hao Chen</p>
+          <p class="text-sm">Purdue University</p>
+        </div>
+        <div class="text-center">
+          <p class="font-semibold">Jia Lin Cheoh</p>
+          <p class="text-sm">Purdue University</p>
+        </div>
+        <div class="text-center">
+          <p class="font-semibold">Manthan Keim</p>
+          <p class="text-sm">Purdue University</p>
+        </div>
+        <div class="text-center">
+          <p class="font-semibold">Sabine Brunswicker</p>
+          <p class="text-sm">Purdue University</p>
+        </div>
+        <div class="text-center">
+          <p class="font-semibold">Tianyi Zhang</p>
+          <p class="text-sm">Purdue University</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">Abstract</h2>
+      <div class="prose max-w-none">
+        <p class="text-lg leading-relaxed">
+          Programming in data science is distinct from traditional software development, often relying on tools like
+          Jupyter Notebooks. This paper investigates fine-grained programming mistakes and fixing behaviors in data
+          science through analysis of 390 Jupyter notebooks created by 67 participants over a six-week competition and
+          follow-up interviews with 10 practitioners. We find that errors frequently occur during data preprocessing and
+          exploration stages, with common issues such as ValueError and NameError. We identify 12 fix patterns and 5
+          types of debugging actions. Our results suggest a need for tools that better support debugging iterative
+          workflows and managing cell dependencies in computational notebooks.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">Error Distribution across DS Stages</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-slate-200 rounded-lg text-base">
+          <thead class="bg-slate-100">
+            <tr>
+              <th class="px-4 py-2 text-left font-semibold">Stage</th>
+              <th class="px-4 py-2 text-left font-semibold">AttrErr</th>
+              <th class="px-4 py-2 text-left font-semibold">TypeErr</th>
+              <th class="px-4 py-2 text-left font-semibold">ValErr</th>
+              <th class="px-4 py-2 text-left font-semibold">NameErr</th>
+              <th class="px-4 py-2 text-left font-semibold">NotFnd</th>
+              <th class="px-4 py-2 text-left font-semibold">BadReq</th>
+              <th class="px-4 py-2 text-left font-semibold">KeyErr</th>
+              <th class="px-4 py-2 text-left font-semibold">SyntaxErr</th>
+              <th class="px-4 py-2 text-left font-semibold">IndexErr</th>
+              <th class="px-4 py-2 text-left font-semibold">ModNotFnd</th>
+              <th class="px-4 py-2 text-left font-semibold">Misc</th>
+              <th class="px-4 py-2 text-left font-semibold">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2">Data Loading</td>
+              <td class="px-4 py-2">9</td>
+              <td class="px-4 py-2">3</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">25</td>
+              <td class="px-4 py-2">28</td>
+              <td class="px-4 py-2">27</td>
+              <td class="px-4 py-2">6</td>
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">101</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Date Preprocessing</td>
+              <td class="px-4 py-2">25</td>
+              <td class="px-4 py-2">17</td>
+              <td class="px-4 py-2">32</td>
+              <td class="px-4 py-2">25</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">25</td>
+              <td class="px-4 py-2">12</td>
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">140</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Data Exploration</td>
+              <td class="px-4 py-2">24</td>
+              <td class="px-4 py-2">18</td>
+              <td class="px-4 py-2">37</td>
+              <td class="px-4 py-2">31</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">20</td>
+              <td class="px-4 py-2">22</td>
+              <td class="px-4 py-2">14</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">170</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Modeling</td>
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">8</td>
+              <td class="px-4 py-2">3</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">15</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Prediction</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">7</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Evaluation</td>
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">3</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Visualization</td>
+              <td class="px-4 py-2">9</td>
+              <td class="px-4 py-2">5</td>
+              <td class="px-4 py-2">13</td>
+              <td class="px-4 py-2">16</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">8</td>
+              <td class="px-4 py-2">8</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">2</td>
+              <td class="px-4 py-2">56</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Result Saving</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Comment Only</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Helper Functions</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">19</td>
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">4</td>
+              <td class="px-4 py-2">0</td>
+              <td class="px-4 py-2">12</td>
+              <td class="px-4 py-2">1</td>
+              <td class="px-4 py-2">37</td>
+            </tr>
+            <tr class="font-semibold bg-slate-50">
+              <td class="px-4 py-2">Total</td>
+              <td class="px-4 py-2">70</td>
+              <td class="px-4 py-2">44</td>
+              <td class="px-4 py-2">111</td>
+              <td class="px-4 py-2">103</td>
+              <td class="px-4 py-2">28</td>
+              <td class="px-4 py-2">27</td>
+              <td class="px-4 py-2">55</td>
+              <td class="px-4 py-2">50</td>
+              <td class="px-4 py-2">19</td>
+              <td class="px-4 py-2">12</td>
+              <td class="px-4 py-2">10</td>
+              <td class="px-4 py-2">529</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-4">Citation</h2>
+      <div class="bg-gray-50 p-4 rounded-lg relative">
+        <button onclick="copyToClipboard()"
+          class="absolute top-2 right-2 bg-slate-500 text-white px-2 py-1 rounded-md hover:bg-slate-700 transition-colors flex items-center">
+          <i class="fa-regular fa-copy mr-1"></i>
+        </button>
+        <pre id="citationText" class="text-sm overflow-x-auto">@inproceedings{chen2025mistakes,
+  title={Towards Understanding Fine-Grained Programming Mistakes and Fixing Patterns in Data Science},
+  author={Chen, Wei-Hao and Cheoh, Jia Lin and Keim, Manthan and Brunswicker, Sabine and Zhang, Tianyi},
+  booktitle={Proceedings of the 2025 ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+  year={2025},
+  organization={ACM}
+}</pre>
+      </div>
+    </section>
+
+    <script>
+      function copyToClipboard() {
+        const citation = document.getElementById('citationText').textContent;
+        navigator.clipboard.writeText(citation).then(() => {
+          const button = document.querySelector('button');
+          const originalText = button.innerHTML;
+          button.innerHTML = '<i class="fa-solid fa-check mr-1"></i>Copied!';
+          setTimeout(() => {
+            button.innerHTML = originalText;
+          }, 2000);
+        });
+      }
+    </script>
+  </div>
+</body>
+
+</html>
