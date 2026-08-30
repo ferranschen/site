@@ -21,3 +21,27 @@
     background-size: 100px 6px;
     background-repeat: repeat-x;
   }
+/* ---------------------------------------------------------------
+   Display typography — Instrument Serif
+   Used ONLY for the hero slogan. Everything else on the site --
+   nav, section titles, body copy, publication titles, metadata
+   and tags -- stays sans / mono, so the serif reads as the single
+   deliberate accent rather than a theme.
+   Instrument Serif ships a single weight (400), so never combine
+   .font-display with font-bold — synthesized bold ruins the
+   stroke contrast. Size and italic carry the emphasis instead.
+   --------------------------------------------------------------- */
+.font-display {
+  font-family: 'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  font-synthesis: none;
+}
+
+.font-display-italic {
+  font-family: 'Instrument Serif', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.015em;
+  font-synthesis: none;
+}
