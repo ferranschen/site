@@ -1,0 +1,300 @@
+<!doctype html><html lang="zh-Hant"><head><title>反五度琴鍵筆記</title><meta charset="UTF-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Music&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap">
+<style>
+/* Layout: one reading column; each key is a strip of [name | keyboard drawn to real key geometry | scale + what changed]. */
+:root{
+  --bg:#eef0f3; --surface:#fbfbfc; --ink:#161a22; --muted:#5a6272; --rule:#d3d7df;
+  --tone:#2a66cc; --tone-ink:#ffffff; --new:#f08a24; --new-ink:#201003; --new-text:#a94c06;
+  --wk:#ffffff; --wk-off:#dde0e6; --wk-stroke:#878d99; --wk-ink:#161a22;
+  --bk:#15171c; --bk-off:#9a9fab; --bk-stroke:#15171c; --bk-ink:#f1f2f4;
+  --display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --music:"Noto Music","Noto Sans Symbols","Segoe UI Symbol","Apple Symbols","DejaVu Sans",sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101216; --surface:#181b21; --ink:#e7e9ee; --muted:#9aa2b0; --rule:#2c313b;
+    --new-text:#f5a34e;
+    --wk:#e9e7e1; --wk-off:#555a65; --wk-stroke:#0c0d10;
+    --bk:#08090b; --bk-off:#343841; --bk-stroke:#000000;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101216; --surface:#181b21; --ink:#e7e9ee; --muted:#9aa2b0; --rule:#2c313b;
+  --new-text:#f5a34e;
+  --wk:#e9e7e1; --wk-off:#555a65; --wk-stroke:#0c0d10;
+  --bk:#08090b; --bk-off:#343841; --bk-stroke:#000000;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7}
+.page{max-width:1040px;margin-inline:auto;padding-inline:20px;padding-block:2.5rem 4rem;display:flex;flex-direction:column;gap:2.75rem}
+.acc{font-family:var(--music)}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.25}
+h1{font-size:clamp(2rem,6vw,3rem);font-weight:900;letter-spacing:.02em}
+h2{font-size:1.45rem;font-weight:700}
+p{margin:0}
+.lede{max-width:38em;color:var(--muted);margin-top:.75rem}
+header{display:flex;flex-direction:column}
+.path{display:flex;flex-wrap:wrap;gap:.3rem .45rem;align-items:center;margin-top:1.25rem;font-weight:700;font-variant-numeric:tabular-nums}
+.path span.k{background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:.05rem .5rem}
+.path span.a{color:var(--muted);font-weight:400}
+
+section{display:flex;flex-direction:column;gap:1rem}
+.rules{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.6rem;max-width:44em}
+.rules li{padding-left:1rem;border-left:2px solid var(--rule)}
+.rules b{font-weight:700}
+.seq{font-variant-numeric:tabular-nums}
+[hidden]{display:none!important}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:.6rem;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--ink);border-radius:6px;overflow:hidden}
+.seg button{font:inherit;font-weight:700;padding:.35rem 1rem;background:transparent;color:var(--ink);border:0;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.seg button:focus-visible{outline:3px solid var(--tone);outline-offset:-3px}
+.bar .hint{color:var(--muted);font-size:.875rem}
+
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;font-size:.875rem;color:var(--muted);list-style:none;margin:0;padding:0}
+.legend li{display:flex;align-items:center;gap:.45rem}
+.sw{display:inline-block;width:1.05rem;height:1.05rem;flex:none}
+.sw.tone{background:var(--tone);border-radius:50%}
+.sw.new{background:var(--new);border-radius:3px}
+.sw.off{background:var(--wk-off);border:1px solid var(--wk-stroke);border-radius:2px}
+
+.ladder{display:flex;flex-direction:column}
+.row{display:grid;grid-template-columns:9.5rem minmax(240px,300px) minmax(0,1fr);gap:1.75rem;align-items:center;padding-block:1.4rem;border-bottom:1px solid var(--rule)}
+.head{display:flex;flex-direction:column;gap:.1rem}
+.ord{font-size:.75rem;letter-spacing:.08em;color:var(--muted);font-variant-numeric:tabular-nums}
+.head h3{font-size:1.75rem;font-weight:900}
+.head h3 small{font-size:1rem;font-weight:700}
+.alt{font-size:.875rem;color:var(--muted)}
+.sig{font-weight:700;font-variant-numeric:tabular-nums}
+.detail{display:flex;flex-direction:column;gap:.6rem;min-width:0}
+.scale{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;max-width:25rem}
+.scale li{display:flex;flex-direction:column;align-items:center;padding:.2rem 0 .3rem;border-radius:4px;background:var(--wk);color:var(--wk-ink);border:1px solid var(--wk-stroke);line-height:1.3}
+.scale li.blk{background:var(--bk);color:var(--bk-ink);border-color:var(--bk-stroke)}
+.scale li.new{outline:3px solid var(--new);outline-offset:1px}
+.scale .d{font-size:.7rem;opacity:.7;font-variant-numeric:tabular-nums}
+.scale .n{font-weight:700}
+.step{max-width:34em}
+.blkline{font-size:.875rem;color:var(--muted)}
+.blkline b{color:var(--ink);font-variant-numeric:tabular-nums}
+
+.kb{display:block;width:100%;height:auto;font-family:var(--body)}
+.kb .wk{fill:var(--wk);stroke:var(--wk-stroke);stroke-width:1}
+.kb .wk.off{fill:var(--wk-off)}
+.kb .bk{fill:var(--bk);stroke:var(--bk-stroke);stroke-width:1}
+.kb .bk.off{fill:var(--bk-off)}
+.kb .chip{fill:var(--tone)}
+.kb .chip.new{fill:var(--new)}
+.kb .cn{fill:var(--tone-ink);font-weight:700;text-anchor:middle;dominant-baseline:central}
+.kb .cn.new{fill:var(--new-ink)}
+.kb .wl{fill:var(--muted);font-size:9.5px;text-anchor:middle}
+.kb .wl.on{fill:var(--ink);font-weight:700}
+.kb .bl{fill:var(--ink);font-size:9.5px;font-weight:700;text-anchor:middle}
+.kb .bl.new{fill:var(--new-text)}
+.kb .acc{font-family:var(--music)}
+
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.75rem}
+.trio figure{margin:0;display:flex;flex-direction:column;gap:.5rem}
+.trio figcaption b{font-family:var(--display);font-size:1.2rem;display:block}
+.trio figcaption span{color:var(--muted);font-size:.9375rem}
+
+.sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin:0}
+.sum div{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.sum dt{font-weight:700}
+.sum dd{margin:0;color:var(--muted)}
+.sum dd b{color:var(--ink)}
+
+@media (max-width:860px){
+  .row{grid-template-columns:minmax(0,1fr);gap:.9rem}
+  .head{flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:.25rem .75rem}
+  .kbwrap{max-width:380px}
+}
+</style>
+
+<div class="page">
+  <header>
+    <h1>反五度琴鍵筆記</h1>
+    <p class="lede">從 C 出發，每次下行五度，繞十二步回到 C。鍵盤圖照實際琴鍵位置畫，黑鍵落在兩個白鍵的縫上，所以 F♯ 就在 F 和 G 之間。</p>
+    <div class="path" id="path" aria-label="調性順序"></div>
+  </header>
+
+  <section>
+    <h2>核心規律</h2>
+    <ul class="rules" data-mode="maj">
+      <li>每往下一步只換一個音：前一調的<b>第 7 級降半音</b>，變成新調的<b>第 4 級</b>。</li>
+      <li>前一調的第 4 級，到下一調順延成<b>第 1 級</b>（主音）。</li>
+      <li>降號段 C → D♭：新的第 4 級都是黑鍵。黑鍵級數依序是 <span class="seq">無 → 4 → 1, 4 → 1, 4, 5 → 1, 2, 4, 5 → 1, 2, 4, 5, 6</span>。</li>
+      <li>鍵盤只有 5 個黑鍵。全滿之後白鍵只剩 2 個，接下來新的第 4 級落回白鍵，黑鍵由多變少。</li>
+    </ul>
+    <ul class="rules" data-mode="min" hidden>
+      <li>每往下一步只換一個音，新換進來的音永遠落在<b>第 6 級</b>。</li>
+      <li>前一調的第 6 級，到下一調順延成<b>第 3 級</b>。</li>
+      <li>降號段 A → B♭：黑鍵級數依序是 <span class="seq">無 → 6 → 3, 6 → 3, 6, 7 → 3, 4, 6, 7 → 1, 3, 4, 6, 7</span>。</li>
+      <li>同一列的大調和小調是關係調，按的鍵完全相同，只有級數的編號不同：大調的 4 級就是小調的 6 級，大調的 1 級就是小調的 3 級。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>十二個調的琴鍵圖</h2>
+    <ul class="legend">
+      <li><span class="sw tone"></span>音階裡的音，數字是級數</li>
+      <li><span class="sw new"></span>這一步新換進來的音（方形）</li>
+      <li><span class="sw off"></span>沒用到的鍵</li>
+    </ul>
+    <div class="bar">
+      <div class="seg" role="group" aria-label="級數編號">
+        <button type="button" id="btn-maj" aria-pressed="true">大調</button>
+        <button type="button" id="btn-min" aria-pressed="false">小調</button>
+      </div>
+      <span class="hint">切換後按的鍵不變，只有級數重新編號。</span>
+    </div>
+    <div class="ladder" id="ladder"></div>
+  </section>
+
+  <section>
+    <h2>五個黑鍵全滿的三種型態</h2>
+    <p class="lede" style="margin-top:0">黑鍵全按時不用背五個黑鍵是誰，直接看剩下哪兩個白鍵，也就是拇指的落點。</p>
+    <div class="trio" id="trio"></div>
+  </section>
+
+  <section>
+    <h2>循環的視覺規律</h2>
+    <dl class="sum">
+      <div>
+        <dt>降號段　C → F → B♭ → E♭ → A♭ → D♭</dt>
+        <dd>黑鍵逐顆吃進：<b>B♭ → E♭ → A♭ → D♭ → G♭</b>。三黑鍵組和兩黑鍵組輪流，各組內由右往左。</dd>
+      </div>
+      <div>
+        <dt>轉折點　D♭ → G♭/F♯ → B</dt>
+        <dd>黑鍵維持五個，只有兩個白鍵在換：<b>C、F → F、B → B、E</b>。</dd>
+      </div>
+      <div>
+        <dt>升號段　B → E → A → D → G → C</dt>
+        <dd>白鍵逐顆回來：<b>A → D → G → C → F</b>。黑鍵離開的順序和當初進來的順序相同，先進來的先離開。</dd>
+      </div>
+    </dl>
+  </section>
+</div>
+
+<script>
+(function(){
+  var ROWS=[
+    {maj:'C', min:'A', sig:'無升降', n:['C','D','E','F','G','A','B'], step:'全白鍵，循環的起點。'},
+    {maj:'F', min:'D', sig:'1♭', n:['F','G','A','B♭','C','D','E'], step:'B 降成 B♭，成為第 {d} 級。'},
+    {maj:'B♭', min:'G', sig:'2♭', n:['B♭','C','D','E♭','F','G','A'], step:'E 降成 E♭，成為第 {d} 級。'},
+    {maj:'E♭', min:'C', sig:'3♭', n:['E♭','F','G','A♭','B♭','C','D'], step:'A 降成 A♭，成為第 {d} 級。'},
+    {maj:'A♭', min:'F', sig:'4♭', n:['A♭','B♭','C','D♭','E♭','F','G'], step:'D 降成 D♭，成為第 {d} 級。'},
+    {maj:'D♭', min:'B♭', sig:'5♭', n:['D♭','E♭','F','G♭','A♭','B♭','C'], step:'G 降成 G♭，成為第 {d} 級。五個黑鍵全滿，白鍵只剩 C、F。'},
+    {maj:'G♭', majAlt:'F♯', min:'E♭', minAlt:'D♯', sig:'6♭ / 6♯', n:['G♭','A♭','B♭','C♭','D♭','E♭','F'], step:'C 降成 C♭，實際按白鍵 B，成為第 {d} 級。黑鍵仍是五個，白鍵換成 F、B。改用升號拼寫時，白鍵 F 記作 E♯。'},
+    {maj:'B', min:'G♯', sig:'5♯', n:['B','C♯','D♯','E','F♯','G♯','A♯'], step:'E♯（白鍵 F）降成 E，成為第 {d} 級。黑鍵仍是五個，白鍵換成 B、E。'},
+    {maj:'E', min:'C♯', sig:'4♯', n:['E','F♯','G♯','A','B','C♯','D♯'], step:'A♯ 降成 A，黑鍵回到白鍵，成為第 {d} 級。'},
+    {maj:'A', min:'F♯', sig:'3♯', n:['A','B','C♯','D','E','F♯','G♯'], step:'D♯ 降成 D，黑鍵回到白鍵，成為第 {d} 級。'},
+    {maj:'D', min:'B', sig:'2♯', n:['D','E','F♯','G','A','B','C♯'], step:'G♯ 降成 G，黑鍵回到白鍵，成為第 {d} 級。'},
+    {maj:'G', min:'E', sig:'1♯', n:['G','A','B','C','D','E','F♯'], step:'C♯ 降成 C，黑鍵回到白鍵，成為第 {d} 級。黑鍵只剩 F♯。'}
+  ];
+  var BASE={C:0,D:2,E:4,F:5,G:7,A:9,B:11};
+  function pc(n){return (BASE[n[0]]+(n[1]==='♭'?-1:n[1]==='♯'?1:0)+12)%12}
+  function isBlack(p){return [1,3,6,8,10].indexOf(p)>=0}
+  function acc(s){return s.replace(/[♭♯]/g,function(m){return '<span class="acc">'+m+'</span>'})}
+  function accSvg(s){return s.replace(/[♭♯]/g,function(m){return '<tspan class="acc">'+m+'</tspan>'})}
+
+  // Real keyboard geometry: black keys are not centred on the gaps; the outer keys of each group lean outward.
+  var W=28, WHITE=[0,2,4,5,7,9,11,0], WNAME=['C','D','E','F','G','A','B','C'];
+  var BLACKS=[{p:1,x:W-2.5},{p:3,x:2*W+2.5},{p:6,x:4*W-3.2},{p:8,x:5*W},{p:10,x:6*W+3.2}];
+
+  function chip(cx,cy,r,txt,isNew,fs){
+    var shape=isNew
+      ? '<rect class="chip new" x="'+(cx-r)+'" y="'+(cy-r)+'" width="'+2*r+'" height="'+2*r+'" rx="'+(r*0.3)+'"/>'
+      : '<circle class="chip" cx="'+cx+'" cy="'+cy+'" r="'+r+'"/>';
+    return shape+'<text class="cn'+(isNew?' new':'')+'" x="'+cx+'" y="'+cy+'" font-size="'+fs+'">'+txt+'</text>';
+  }
+  function keyboard(notes,newPc,thumb,label){
+    var map={};
+    notes.forEach(function(n,i){map[pc(n)]={deg:i+1,name:n}});
+    var s='<svg class="kb" viewBox="-3 -18 230 134" role="img" aria-label="'+label+' 琴鍵圖">';
+    WHITE.forEach(function(p,i){
+      var hit=map[p], cx=i*W+W/2;
+      s+='<rect class="wk '+(hit?'on':'off')+'" x="'+i*W+'" y="0" width="'+W+'" height="98" rx="2.5"/>';
+      if(hit) s+= thumb ? chip(cx,80,8.5,'拇',true,10) : chip(cx,80,8.5,hit.deg,p===newPc,11);
+      s+='<text class="wl'+(hit?' on':'')+'" x="'+cx+'" y="112">'+WNAME[i]+'</text>';
+    });
+    BLACKS.forEach(function(b){
+      var hit=map[b.p];
+      s+='<rect class="bk '+(hit?'on':'off')+'" x="'+(b.x-8.25)+'" y="0" width="16.5" height="60" rx="2"/>';
+      if(hit){
+        if(!thumb) s+=chip(b.x,46,6.6,hit.deg,b.p===newPc,9);
+        s+='<text class="bl'+(b.p===newPc&&!thumb?' new':'')+'" x="'+b.x+'" y="-6">'+accSvg(hit.name)+'</text>';
+      }
+    });
+    return s+'</svg>';
+  }
+
+  function render(mode){
+    var isMaj=mode==='maj', d=isMaj?4:6, word=isMaj?'大調':'小調';
+    document.getElementById('path').innerHTML=ROWS.map(function(r){
+      var k=isMaj?r.maj:r.min, a=isMaj?r.majAlt:r.minAlt;
+      return '<span class="k">'+acc(k+(a?'/'+a:''))+'</span>';
+    }).join('<span class="a">→</span>')+'<span class="a">→ 回到 '+(isMaj?'C':'A')+'</span>';
+
+    document.getElementById('ladder').innerHTML=ROWS.map(function(r,i){
+      var notes=isMaj?r.n:r.n.slice(5).concat(r.n.slice(0,5));
+      var newPc=i?pc(r.n[3]):-1;
+      var key=isMaj?r.maj:r.min, alt=isMaj?r.majAlt:r.minAlt;
+      var bd=[],bn=[];
+      notes.forEach(function(n,k){if(isBlack(pc(n))){bd.push(k+1);bn.push(n)}});
+      var cells=notes.map(function(n,k){
+        var p=pc(n);
+        return '<li class="'+(isBlack(p)?'blk':'')+(p===newPc?' new':'')+'"><span class="d">'+(k+1)+'</span><span class="n">'+acc(n)+'</span></li>';
+      }).join('');
+      return '<article class="row">'
+        +'<div class="head"><span class="ord">順序 '+i+'</span>'
+        +'<h3>'+acc(key)+' <small>'+word+'</small></h3>'
+        +(alt?'<span class="alt">= '+acc(alt)+' '+word+'</span>':'')
+        +'<span class="sig">'+acc(r.sig)+'</span></div>'
+        +'<div class="kbwrap">'+keyboard(notes,newPc,false,key+' '+word)+'</div>'
+        +'<div class="detail"><ol class="scale">'+cells+'</ol>'
+        +'<p class="step">'+acc(r.step.replace('{d}',d))+'</p>'
+        +'<p class="blkline">'+(bd.length?'黑鍵級數 <b>'+bd.join(', ')+'</b>　'+acc(bn.join('、')):'沒有黑鍵')+'</p>'
+        +'</div></article>';
+    }).join('');
+
+    document.querySelectorAll('.rules').forEach(function(el){el.hidden=el.getAttribute('data-mode')!==mode});
+    document.getElementById('btn-maj').setAttribute('aria-pressed',String(isMaj));
+    document.getElementById('btn-min').setAttribute('aria-pressed',String(!isMaj));
+    try{localStorage.setItem('fifths-mode',mode)}catch(e){}
+  }
+
+  // Wrap accidentals in the static text so they use a music face instead of a full-width CJK glyph.
+  var walker=document.createTreeWalker(document.querySelector('.page'),NodeFilter.SHOW_TEXT), found=[];
+  while(walker.nextNode()){ if(/[♭♯]/.test(walker.currentNode.nodeValue)) found.push(walker.currentNode); }
+  found.forEach(function(t){
+    var tmp=document.createElement('span');
+    tmp.innerHTML=acc(t.nodeValue.replace(/&/g,'&amp;').replace(/</g,'&lt;'));
+    var frag=document.createDocumentFragment();
+    while(tmp.firstChild) frag.appendChild(tmp.firstChild);
+    t.parentNode.replaceChild(frag,t);
+  });
+
+  var TRIO=[
+    {i:5,name:'D♭ 大調',text:'留 C、F：每組黑鍵左邊的白鍵。'},
+    {i:6,name:'G♭ / F♯ 大調',text:'留 F、B：夾住三黑鍵組的兩個白鍵。'},
+    {i:7,name:'B 大調',text:'留 B、E：每組黑鍵右邊的白鍵。'}
+  ];
+  document.getElementById('trio').innerHTML=TRIO.map(function(t){
+    return '<figure>'+keyboard(ROWS[t.i].n,-1,true,t.name)+'<figcaption><b>'+acc(t.name)+'</b><span>'+acc(t.text)+'</span></figcaption></figure>';
+  }).join('');
+
+  var mode='maj';
+  try{ if(localStorage.getItem('fifths-mode')==='min') mode='min'; }catch(e){}
+  if(location.hash==='#minor') mode='min';
+  if(location.hash==='#major') mode='maj';
+  document.getElementById('btn-maj').addEventListener('click',function(){render('maj')});
+  document.getElementById('btn-min').addEventListener('click',function(){render('min')});
+  render(mode);
+})();
+</script>
+
+</body></html>
